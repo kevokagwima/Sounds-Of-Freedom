@@ -151,7 +151,7 @@ header {
 }
 
 .hero {
-  min-height: 40rem;
+  min-height: 90dvh;
   margin-top: 5.3rem;
   padding: 5rem 8rem;
   isolation: isolate;
