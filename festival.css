@@ -1,0 +1,1773 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-bgcolor: white;
+  --sec-bgcolor: whitesmoke;
+  --highlight-bgcolor: #ff6900;
+  --brown: rgb(51, 37, 37);
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--brown);
+  max-width: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--main-bgcolor);
+  color: var(--brown);
+}
+
+section,
+div {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 5ch;
+}
+
+p {
+  font-family: var(--paragraph-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-bgcolor);
+}
+
+header {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  min-width: 100vw;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.active-header {
+  box-shadow: 0 0 10px -8px black;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#link {
+  color: #212121;
+  font-family: var(--links-font);
+}
+
+#link:hover {
+  color: var(--highlight-bgcolor);
+  font-weight: 700;
+}
+
+#logo img {
+  max-height: 3rem;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url("./Images/Freedom\ fighters.png");
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text img {
+  max-height: 50rem;
+}
+
+.decode {
+  background-image: url("./Images/bg.png");
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.decode-img {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.decode-img img {
+  min-height: 35rem;
+}
+
+.decode-box {
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
+
+.decode-box h1 {
+  color: var(--main-bgcolor);
+  font-size: 7ch;
+}
+
+.decode-info {
+  background-color: var(--brown);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 70%;
+}
+
+.decode-info h4,
+.info h4 {
+  font-family: var(--header-font);
+  font-size: 4ch;
+  color: var(--highlight-bgcolor);
+}
+
+.decode-info p,
+.info p {
+  color: var(--main-bgcolor);
+  font-size: 2.5ch;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+.invitations {
+  min-height: 100vh;
+  background-image: url("./Images/bg1.png");
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  padding-left: 10rem;
+}
+
+#scroll {
+  grid-column: 1/3;
+  grid-row: 1/4;
+}
+
+.info {
+  background-color: var(--brown);
+  padding: 2rem;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  max-width: 60%;
+  border-radius: 0.5rem;
+}
+
+.festival {
+  background-image: url("./Images/bg2.png");
+  padding: 8rem;
+}
+
+.festival h1 {
+  background-color: var(--brown);
+  padding: 1rem;
+  color: var(--main-bgcolor);
+  text-align: center;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+.festival-box {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.festival-info {
+  min-height: 25rem;
+  background-image: cover;
+  background-position: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.festival-info:nth-child(1) {
+  background-image: url(./Images/dedanK_3.jpg);
+}
+
+.festival-info:nth-child(2) {
+  background-image: url(./Images/mount_kenya_trek.jpg);
+}
+
+.festival-info:nth-child(3) {
+  background-image: url(./Images/Picture3.png);
+}
+
+.festival-info:nth-child(4) {
+  background-image: url(./Images/planting.jpg);
+}
+
+.festival-text {
+  height: 100%;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0, 0.6);
+  display: flex;
+  align-items: end;
+  color: var(--main-bgcolor);
+}
+
+.festival-text p {
+  line-height: 1.5;
+  font-size: 2ch;
+}
+
+.attend {
+  min-height: 100vh;
+  background-image: url("./Images/bg3.png");
+}
+
+.attend-cont {
+  background-color: var(--brown);
+  margin: 5rem;
+  max-width: 40%;
+  padding: 2rem;
+}
+
+.attend-cont h1 {
+  text-align: center;
+  color: var(--main-bgcolor);
+}
+
+.attend-box {
+  margin-top: 3rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.line {
+  min-height: 6rem;
+  width: 0.2rem;
+  background-color: var(--highlight-bgcolor);
+  margin-inline: auto;
+}
+
+.attend-info h1 {
+  margin-bottom: 1rem;
+  color: var(--main-bgcolor);
+}
+
+.attend-info p {
+  font-size: 2.2ch;
+  line-height: 1.5;
+  color: var(--main-bgcolor);
+  margin-inline: auto;
+}
+
+.mission {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.involved {
+  background-image: url("./Images/bg4.png");
+  display: grid;
+  place-items: center;
+  padding: 0 3rem 0 6rem;
+}
+
+.involved-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.involved-info h1,
+.involved-info > p {
+  background-color: var(--brown);
+  padding: 0.6rem;
+  color: var(--main-bgcolor);
+  max-width: max-content;
+  font-size: 5ch;
+}
+
+.involved-info > p {
+  line-height: 1.5;
+  font-size: 2.2ch;
+}
+
+.box {
+  display: grid;
+  gap: 1rem;
+  background-color: var(--main-bgcolor);
+  color: var(--brown);
+  padding: 1rem;
+}
+
+#mission-header {
+  background-color: var(--main-bgcolor);
+  color: var(--brown);
+}
+
+.join {
+  max-width: max-content;
+}
+
+.involved-info .input {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 2rem 0 0;
+}
+
+.involved-info .input label {
+  font-family: var(--links-font);
+  color: var(--brown);
+}
+
+form button,
+#join {
+  border: none;
+  padding: 1em;
+  background-color: var(--brown);
+  font-family: var(--paragraph-font);
+  font-size: 2.1ch;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: var(--main-bgcolor);
+  margin-top: 0.8rem;
+}
+
+.wanawake {
+  background-image: url("./Images/Wanawake\ ni\ worriors\ Cheche\ ii.png");
+  background-size: cover;
+  background-position: bottom;
+  min-height: 100vh;
+}
+
+.mission-form {
+  grid-column: 1/3;
+  padding: 4rem;
+  background-color: var(--brown);
+  display: none;
+}
+
+.show-mission-form {
+  display: block;
+}
+
+form,
+.input {
+  display: grid;
+  gap: 1rem;
+}
+
+form {
+  background-color: var(--brown);
+  max-width: 50%;
+  margin-inline: auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.input {
+  gap: 0.5rem;
+  padding: 0.2rem;
+}
+
+.input label {
+  font-family: var(--links-font);
+  color: var(--main-bgcolor);
+}
+
+.input input {
+  padding: 1em;
+  border: none;
+  border-radius: 0.3rem;
+  font-family: var(--paragraph-font);
+  background-color: var(--main-bgcolor);
+  color: var(--brown);
+}
+
+form .input input:focus {
+  outline: 3px solid var(--highlight-bgcolor);
+}
+
+form button {
+  background-color: var(--highlight-bgcolor);
+  grid-column: 1/3;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .hero-text img {
+    max-height: 35rem;
+  }
+
+  .decode-box h1 {
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    max-width: 100%;
+  }
+
+  .festival-box {
+    padding-inline: 0;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 60%;
+    margin: 0 auto;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .involved {
+    padding: 2rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .mission-form {
+    grid-column: 1/3;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 50%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .hero-text img {
+    max-height: 35rem;
+  }
+
+  .decode-img {
+    grid-row: 1/3;
+  }
+
+  .decode-box {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  .decode-box h1 {
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 4ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 2.5ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    gap: 2rem;
+  }
+
+  #scroll {
+    grid-column: 1/3;
+    grid-row: 1/4;
+    max-height: 50rem;
+  }
+
+  .info {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    max-width: 40%;
+    padding: 4rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 4rem;
+  }
+
+  .festival-text p {
+    font-size: 2.5ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-text img {
+    max-height: 25rem;
+  }
+
+  .decode-img {
+    grid-row: 1/3;
+  }
+
+  .decode-box {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+
+  .decode-box h1 {
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 4ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 2.5ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    gap: 2rem;
+  }
+
+  #scroll {
+    grid-column: 1/3;
+    grid-row: 1/4;
+    max-height: 50rem;
+  }
+
+  .info {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    max-width: 40%;
+    padding: 4rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .festival-text p {
+    font-size: 2.5ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-text img {
+    max-height: 25rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 2rem;
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 5ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 3ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 30rem;
+    max-width: 120%;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .festival-text p {
+    font-size: 2.5ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+    min-height: 85vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 70%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header {
+    padding-inline: 2rem;
+  }
+
+  .hero {
+    min-height: 80vh;
+  }
+
+  .hero-text img {
+    max-height: 25rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 2rem;
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 4.5ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 3ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 25rem;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .festival-text p {
+    font-size: 2.2ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 1rem 2rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+    min-height: 85vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-text img {
+    max-height: 20rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 1rem;
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 2rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 4.5ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 3ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 25rem;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 2rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+    padding-inline: 0;
+  }
+
+  .festival-text p {
+    font-size: 2ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem 1rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+    min-height: 85vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 60vh;
+  }
+
+  .hero-text img {
+    max-height: 20rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 1rem;
+    font-size: 5ch;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 4ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 2.5ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 20rem;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 4ch;
+  }
+
+  .festival-box {
+    grid-template-columns: 1fr;
+    padding-inline: 1rem;
+  }
+
+  .festival-text p {
+    font-size: 2.5ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 4ch;
+  }
+
+  .line {
+    min-height: 4rem;
+  }
+
+  .attend-info p {
+    font-size: 2.5ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem 1rem;
+  }
+
+  .involved-info h1 {
+    font-size: 4ch;
+  }
+
+  .involved-info p {
+    font-size: 2.5ch;
+  }
+
+  .wanawake {
+    background-size: cover;
+    background-position: bottom;
+    min-height: 85vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 40vh;
+  }
+
+  .hero-text img {
+    max-height: 15rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-img img {
+    min-height: 100%;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 1rem;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .decode-box h1 {
+    font-size: 4ch;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 3ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 2ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 3ch;
+  }
+
+  .festival-box {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 3ch;
+  }
+
+  .line {
+    min-height: 3rem;
+  }
+
+  .attend-info p {
+    font-size: 2ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem 1rem;
+  }
+
+  .involved-info h1 {
+    font-size: 3ch;
+  }
+
+  .involved-info p {
+    font-size: 2ch;
+  }
+
+  .wanawake {
+    background-size: contain;
+    background-position: top;
+    min-height: 60vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  form button {
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-text img {
+    max-height: 12rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-img img {
+    min-height: 100%;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 1rem;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .decode-box h1 {
+    font-size: 4ch;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 3ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 2ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 15rem;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 3ch;
+  }
+
+  .festival-box {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .festival-text p {
+    font-size: 2ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 3ch;
+  }
+
+  .line {
+    min-height: 3rem;
+  }
+
+  .attend-info p {
+    font-size: 2ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem 1rem;
+  }
+
+  .involved-info h1 {
+    font-size: 3ch;
+  }
+
+  .involved-info p {
+    font-size: 2ch;
+  }
+
+  .wanawake {
+    background-size: contain;
+    background-position: top;
+    min-height: 60vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  form button {
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+  }
+
+  .hero-text img {
+    max-height: 10rem;
+  }
+
+  .decode {
+    grid-template-columns: 1fr;
+  }
+
+  .decode-img {
+    grid-row: 1/1;
+  }
+
+  .decode-img img {
+    min-height: 100%;
+  }
+
+  .decode-box {
+    grid-column: 1/2;
+  }
+
+  .decode-box h1 {
+    padding-inline: 1rem;
+  }
+
+  .decode-info {
+    border-radius: 0;
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .decode-box h1 {
+    font-size: 3.5ch;
+  }
+
+  .decode-info h4,
+  .info h4 {
+    font-size: 2.5ch;
+  }
+
+  .decode-info p,
+  .info p {
+    font-size: 1.6ch;
+  }
+
+  .invitations {
+    padding: 2rem 0 2rem 0;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    min-height: 50vh;
+  }
+
+  #scroll {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    max-height: 15rem;
+  }
+
+  .info {
+    grid-row: 2/2;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .festival {
+    padding: 2rem;
+  }
+
+  .festival h1 {
+    font-size: 2.5ch;
+  }
+
+  .festival-box {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .festival-text p {
+    font-size: 1.6ch;
+  }
+
+  .attend {
+    display: grid;
+    place-items: center;
+  }
+
+  .attend-cont {
+    min-height: max-content;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .attend-cont h1 {
+    font-size: 3ch;
+  }
+
+  .line {
+    min-height: 3rem;
+  }
+
+  .attend-info p {
+    font-size: 1.6ch;
+  }
+
+  .mission {
+    grid-template-columns: 1fr;
+  }
+
+  .involved {
+    padding: 2rem 1rem;
+  }
+
+  .involved-info h1 {
+    font-size: 2.5ch;
+  }
+
+  .involved-info p {
+    font-size: 1.6ch;
+  }
+
+  .wanawake {
+    background-size: contain;
+    background-position: top;
+    min-height: 60vh;
+  }
+
+  .mission-form {
+    grid-column: 1/2;
+    padding: 1rem;
+  }
+
+  form {
+    max-width: 100%;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  form button {
+    grid-column: 1/2;
+  }
+}

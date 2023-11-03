@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-bgcolor: white;
+  --sec-bgcolor: whitesmoke;
+  --highlight-bgcolor: #ff6900;
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--main-bgcolor);
+  max-width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+}
+
+body {
+  background-color: var(--main-bgcolor);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+#back {
+  color: var(--main-bgcolor);
+  font-family: var(--header-font);
+  background-color: var(--highlight-bgcolor);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 2ch;
+  position: absolute;
+  inset: 1rem auto auto 1rem;
+}
+
+.container {
+  padding: 4rem 8rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-family: var(--header-font);
+  font-size: 5ch;
+}
+
+.text {
+  padding: 2rem 8rem;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.text p:first-child {
+  font-weight: bold;
+}
+
+.text p {
+  font-family: var(--paragraph-font);
+  font-size: 2.2ch;
+  line-height: 1.5;
+}
+
+.btn {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn a {
+  padding: 1em;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  border-radius: 30rem;
+  font-family: var(--header-font);
+  text-align: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .text {
+    padding: 2rem 5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding-inline: 5rem;
+  }
+
+  .container h1 {
+    font-size: 4ch;
+  }
+
+  .text {
+    padding-inline: 5rem;
+  }
+
+  .text p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    padding-inline: 3rem;
+  }
+
+  .container h1 {
+    font-size: 3.5ch;
+  }
+
+  .text {
+    padding-inline: 3rem;
+  }
+
+  .text p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-inline: 2rem;
+  }
+
+  .container h1 {
+    font-size: 3.2ch;
+  }
+
+  .text {
+    padding-inline: 2rem;
+  }
+
+  .text p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .container h1 {
+    font-size: 2.5ch;
+  }
+
+  .text {
+    padding-inline: 1rem;
+  }
+
+  .text p {
+    font-size: 1.8ch;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 5rem 1rem 1rem;
+  }
+
+  .container h1 {
+    font-size: 2ch;
+  }
+
+  .text {
+    padding-inline: 1rem;
+  }
+
+  .text p {
+    font-size: 1.5ch;
+  }
+
+  .btn {
+    flex-direction: column;
+  }
+}

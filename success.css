@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-bgcolor: white;
+  --sec-bgcolor: whitesmoke;
+  --highlight-bgcolor: #ff6900;
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--main-bgcolor);
+  max-width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+}
+
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.container img {
+  margin-bottom: 1rem;
+}
+
+.container h4 {
+  font-family: var(--header-font);
+  font-size: 5ch;
+}
+
+.container p {
+  font-family: var(--paragraph-font);
+  font-size: 2.2ch;
+  margin-top: 1rem;
+  max-width: 60%;
+  margin-inline: auto;
+}
+
+.container a {
+  text-decoration: none;
+  font-family: var(--links-font);
+  color: var(--highlight-bgcolor);
+}
+
+@media screen and (max-width: 900px) {
+  .container p {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .container img {
+    max-height: 4rem;
+  }
+
+  .container h4 {
+    font-size: 3ch;
+  }
+
+  .container p {
+    max-width: 100%;
+    font-size: 1.6ch;
+  }
+}

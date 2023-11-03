@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-bgcolor: white;
+  --sec-bgcolor: whitesmoke;
+  --highlight-bgcolor: #ff6900;
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--main-bgcolor);
+  max-width: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+}
+
+body {
+  background-color: var(--highlight-bgcolor);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+#back {
+  color: var(--highlight-bgcolor);
+  font-family: var(--header-font);
+  background-color: var(--main-bgcolor);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 2ch;
+  position: absolute;
+  inset: 2rem auto auto 5rem;
+}
+
+.container {
+  padding: 3rem 1rem 0;
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  font-family: var(--header-font);
+  font-size: 5ch;
+  color: var(--main-bgcolor);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: max-content;
+  text-align: center;
+  margin: 6rem auto 0;
+}
+
+.option {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--main-bgcolor);
+  cursor: pointer;
+}
+
+.option h4 {
+  font-family: var(--header-font);
+  font-size: 3ch;
+  margin-top: 3rem;
+}
+
+.form {
+  display: grid;
+  justify-content: center;
+}
+
+#close {
+  max-width: max-content;
+  margin: 0 auto 2rem;
+  border: none;
+  background-color: red;
+  padding: 0.4em 1em;
+  color: var(--main-bgcolor);
+  font-family: var(--paragraph-font);
+  border-radius: 30rem;
+  cursor: pointer;
+  display: none;
+}
+
+.reg-form,
+.join-form {
+  display: none;
+  margin: 0 auto;
+}

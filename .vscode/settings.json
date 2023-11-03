@@ -1,0 +1,5 @@
+{
+  "terminal.integrated.enablePersistentSessions": true,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "git.ignoreLimitWarning": true
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB486H419R"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SB486H419R');
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/Images/output-onlinepngtools.png">
+  <link rel="stylesheet" href="tickets.css">
+  <link rel="stylesheet" href="patriots.css">
+  <title>Audio Film Series Tickets</title>
+</head>
+
+<body>
+  <div class="container">
+    <a href="index.html" id="back">Back</a>
+    <h1 class="header">First Patriots</h1>
+    <div class="options">
+      <div class="option register">
+        <img src="./Images/screenshot.png" alt="sof">
+        <h4>Register A Team</h4>
+      </div>
+      <div class="option join">
+        <img src="./Images/screenshot.png" alt="sof">
+        <h4>Join A Team</h4>
+      </div>
+    </div>
+    <div class="form">
+      <button id="close">Close</button>
+      <form method="post" id='form' class="reg-form">
+        <div class="input">
+          <label for="fname">First Name</label>
+          <input name="First Name" required type="text" id="fname" placeholder="First Name">
+        </div>
+        <div class="input">
+          <label for="surname">Last Name</label>
+          <input name="Surname" required type="text" id="surname" placeholder="Last Name">
+        </div>
+        <!-- <div class="input">
+          <label for="email">Email Address</label>
+          <input name="email" required type="email" id="email" placeholder="Email Address">
+        </div>
+        <div class="input">
+          <label for="phone">Phone Number</label>
+          <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
+        </div> -->
+        <div class="input mpesa">
+          <label for="team">Team Name</label>
+          <input name="team" required type="text" id="team" placeholder="Team Name">
+        </div>
+        <div class="note">
+          <p>Team must consist of 10 members</p>
+          <p> Meeting point: Main Playing Field</p>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+      <form id='form' class="join-form">
+        <div class="input">
+          <label for="fname">First Name</label>
+          <input name="First Name" required type="text" id="fname" placeholder="First Name">
+        </div>
+        <div class="input">
+          <label for="surname">Last Name</label>
+          <input name="Surname" required type="text" id="surname" placeholder="Last Name">
+        </div>
+        <!-- <div class="input">
+          <label for="email">Email Address</label>
+          <input name="email" required type="email" id="email" placeholder="Email Address">
+        </div>
+        <div class="input">
+          <label for="phone">Phone Number</label>
+          <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
+        </div> -->
+        <div class="input mpesa">
+          <label for="team">Choose Team</label>
+          <select name="" id="team">
+          </select>
+        </div>
+        <div class="note">
+          <p>Team must consist of 10 members</p>
+          <p> Meeting point: Main Playing Field</p>
+        </div>
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="patriots.js"></script>
+
+</html>

@@ -1,0 +1,617 @@
+<body>
+  <!--<header class="header">
+    <div id="logo">
+      <a href="index.html">
+        <img src="./Images/Screenshot.png" alt="Sounds Of Freedom">
+      </a>
+    </div>
+  </header>
+  <div class="maintenance">
+    <div class="maintenance-info">
+      <h1>
+        Site under construction
+        <p id="load">.</p>
+        <p id="load">.</p>
+        <p id="load">.</p>
+      </h1>
+      <p>Come back later</p>
+    </div>
+  </div>
+   <section class="hero">
+    <div class="hero-box">
+      <div class="fest-image">
+        <button class="play-btn">
+          <img src="./Images/play-button-arrowhead.png" alt="">
+        </button>
+        <video loop id="video" loading="lazy" poster="./Images/banner-screenshot.png">
+          <source src="./Video/festival banner video_comp.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="hero-info">
+      <h1>Unlock the Secrets of History at <br> the Freedom Festival 2023!</h1>
+      <p>Prepare to embark on an extraordinary adventure as we celebrate Kenya's history like never before. From October
+        20th to December 12th, our festival will transport you to hidden locations within Nairobi.</p>
+    </div>
+    <img loading="lazy" src="./Images/Picture1.png" alt="">
+  </section>
+  <section class="decode">
+    <h1>Get ready to decode</h1>
+    <div class="decode-box">
+      <div class="decode-info-box">
+        <div class="decode-info-text">
+          <h4>Hidden Locations:</h4>
+          <p>The festival will take place at carefully chosen spots within Nairobi, unveiled only to
+            registered participants shortly before the event. This adds an element of mystery and adventure.</p>
+        </div>
+        <div class="decode-info-img">
+          <img loading="lazy" src="./Images/nairobi.jpg" alt="">
+        </div>
+      </div>
+      <div class="decode-info-box">
+        <div class="decode-info-text">
+          <h4>Ciphered Invitations:</h4>
+          <p>Participants will receive ciphered invitations, reminiscent of secret codes used by the Mau
+            Mau. Solving these codes will reveal the event's exact location and time, creating anticipation and
+            engagement.</p>
+        </div>
+        <div class="decode-info-img">
+          <img loading="lazy" src="./Images/cypher.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="festival">
+    <h1>A Festival Like No Other</h1>
+    <div class="festival-box">
+      <div class="festival-info">
+        <div class="festival-text">
+          <p><b>Immersive Film Experiences:</b> Step into the past with immersive film screenings that pay tribute to
+            our
+            heroes
+            and history. Each event is a journey through time, a celebration of our heritage, and an inspiration for
+            active citizenship.</p>
+        </div>
+      </div>
+      <div class="festival-info">
+        <div class="festival-text">
+          <p><b>Adventure Awaits:</b> Step into the shoes of your heroes by engaging in thrilling activities like
+            paintball
+            shooting experiences, fitness challenges, and family and friends adventure games.</p>
+        </div>
+      </div>
+      <div class="festival-info">
+        <div class="festival-text">
+          <p><b>Art & Activism:</b> Explore the intersection of art, history, and activism with book clubs and
+            alternative
+            events
+            at Embe Creatives, Nairobi's vibrant art and fashion village.</p>
+        </div>
+      </div>
+      <div class="festival-info">
+        <div class="festival-text">
+          <p><b>Environmental Conservation:</b> Join us in nurturing our environment with tree planting workshops and
+            activities
+            dedicated to preserving the natural beauty of Nairobi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="attend">
+    <h1>Why Attend</h1>
+    <div class="attend-box">
+      <div class="line"></div>
+      <div class="attend-info">
+        <p>The Freedom Festival 2023 isn't just a festival; it's an exploration of hidden history, an unveiling of
+          secrets, and a call to action. By attending, you become part of a legacy, a tribute to our past, and a
+          catalyst for Kenya's future.</p>
+      </div>
+      <div class="line"></div>
+      <div class="attend-info">
+        <h1>Get Involved</h1>
+        <p>Are you ready to decode history and embark on an adventure of a lifetime? Join us as we unveil the secrets of
+          our past, celebrate our present, and shape a future filled with hope and promise.</p>
+      </div>
+    </div>
+  </section>
+  <section class="mission">
+    <div class="mission-info">
+      <h1>Mission 1: The Induction</h1>
+      <p>Your inaugural mission awaits! It's a mission of purpose and commitment. Your task is simple but profound:
+        plant
+        a tree as a symbol of your dedication to nurturing Kenya and safeguarding her future.
+      </p>
+      <div class="input">
+        <input type="checkbox" name="" id="check">
+        <label for="check">I accept Mission 1</label>
+      </div>
+      <a href="#form">
+        <button id="join">Join The Movement</button>
+      </a>
+    </div>
+    <div class="mission-form">
+      <form id="form" data-netlify="true" method='post' name='Freedom Festival' action="/success/">
+        <div class="input">
+          <label for="fname">First Name</label>
+          <input required type="text" name="First Name" id="fname" placeholder="First Name">
+        </div>
+        <div class="input">
+          <label for="lname">Last Name</label>
+          <input required type="text" name="Last Name" id="lname" placeholder="Last Name">
+        </div>
+        <div class="input">
+          <label for="phone">Phone Number</label>
+          <input required type="number" name="Phone Number" id="phone" placeholder="Phone Number">
+        </div>
+        <div class="input">
+          <label for="email">Email Address</label>
+          <input required type="email" name="Email Address" id="email" placeholder="Email Address">
+        </div>
+        <button type="submit">Join The Movement</button>
+      </form>
+    </div>
+  </section> -->
+
+  <script src="festival.js"></script>
+  <script async id="netlify-rum-container" src="https://netlify-rum.netlify.app/netlify-rum.js"
+    data-netlify-rum-site-id="d2c5229b-797a-4bf7-89d6-98e9f0992750" data-netlify-deploy-branch=""
+    data-netlify-deploy-context="production"
+    data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZDJjNTIyOWItNzk3YS00YmY3LTg5ZDYtOThlOWYwOTkyNzUwIiwiYWNjb3VudF9pZCI6IjYxNDA0MTAyZDE2ODRmNzE3MDBjMzBiOCIsImRlcGxveV9pZCI6IjY0Nzg2YjhiOGZiNjg1NWYzY2VkMGNlMCIsImlzc3VlciI6Im5mc2VydmVyIn0.tA8NM_FqwIuUNbdEMzHVPqsMIMa0BdYccmKOJ3Shols"></script>
+</body>
+
+
+
+
+
+header {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  min-width: 100vw;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.active-header {
+  box-shadow: 0 0 10px -8px black;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#link {
+  color: #212121;
+  font-family: var(--links-font);
+}
+
+#link:hover {
+  color: var(--highlight-bgcolor);
+  font-weight: 700;
+}
+
+#logo img {
+  max-height: 3rem;
+}
+
+.maintenance {
+  min-height: calc(100vh - 12vh);
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+
+.maintenance-info {
+  text-align: center;
+}
+
+.maintenance-info h1 {
+  display: flex;
+  gap: 1rem;
+}
+
+#load {
+  animation: load 0.8s infinite forwards;
+}
+
+#load:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+#load:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes load {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.hero {
+  text-align: center;
+  min-height: 30rem;
+  background-color: var(--brown);
+}
+
+.hero-box {
+  display: grid;
+}
+
+.fest-image {
+  max-width: max-content;
+  margin: 0 auto 1rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.fest-image video {
+  height: 100%;
+  width: 100%;
+  max-height: 25rem;
+  border-radius: 0.3rem;
+}
+
+.play-btn {
+  position: absolute;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  background-color: var(--highlight-bgcolor);
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.play-btn img {
+  height: 2.5rem;
+  transform: translatey(-0.8rem);
+}
+
+.active {
+  z-index: -1;
+}
+
+.hero h1 {
+  color: var(--highlight-bgcolor);
+  font-size: 6ch;
+}
+
+.hero p {
+  margin-top: 1rem;
+  font-size: 2.5ch;
+  max-width: 60%;
+  line-height: 1.5;
+  margin-inline: auto;
+}
+
+.hero img {
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+  max-width: 40%;
+}
+
+.decode h1,
+.festival h1,
+.attend h1 {
+  text-align: center;
+}
+
+.decode-box {
+  margin-top: 4rem;
+  display: grid;
+  gap: 3rem;
+}
+
+.decode-info-box {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.decode-info-box:last-child {
+  flex-direction: row-reverse;
+}
+
+.decode-info-text h4 {
+  font-family: var(--header-font);
+  font-size: 4ch;
+  color: var(--highlight-bgcolor);
+}
+
+.decode-info-text p {
+  margin-top: 1rem;
+  font-size: 2.5ch;
+  line-height: 1.5;
+}
+
+.decode-info-img img {
+  width: 40rem;
+  aspect-ratio: 1/0.6;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.3rem;
+}
+
+.festival-box {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.festival-info {
+  min-height: 25rem;
+  background-image: cover;
+  background-position: center;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.festival-info:nth-child(1) {
+  background-image: url(./Images/dedanK_3.jpg);
+}
+
+.festival-info:nth-child(2) {
+  background-image: url(./Images/mount_kenya_trek.jpg);
+}
+
+.festival-info:nth-child(3) {
+  background-image: url(./Images/Picture3.png);
+}
+
+.festival-info:nth-child(4) {
+  background-image: url(./Images/planting.jpg);
+}
+
+.festival-text {
+  height: 100%;
+  padding: 1rem;
+  background-color: rgb(0, 0, 0, 0.6);
+  display: flex;
+  align-items: end;
+}
+
+.festival-text p {
+  line-height: 1.5;
+}
+
+.attend-box {
+  margin-top: 3rem;
+  text-align: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.line {
+  min-height: 6rem;
+  width: 0.2rem;
+  background-color: var(--highlight-bgcolor);
+  margin-inline: auto;
+}
+
+.attend-info h1 {
+  margin-bottom: 1rem;
+}
+
+.attend-info p {
+  font-size: 2.2ch;
+  line-height: 1.5;
+  max-width: 50%;
+  margin-inline: auto;
+}
+
+.mission {
+  color: var(--brown);
+  background-color: var(--sec-bgcolor);
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 5rem;
+}
+
+.mission-info p {
+  margin-top: 1rem;
+  font-size: 2.2ch;
+  line-height: 1.5;
+}
+
+.mission-info .input {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 2rem 0 1rem;
+}
+
+.mission-form {
+  min-width: 30vw;
+  display: none;
+}
+
+.show-mission-form {
+  display: block;
+}
+
+form,
+.input {
+  display: grid;
+  gap: 1rem;
+}
+
+.input {
+  gap: 0.5rem;
+}
+
+.input label {
+  font-family: var(--links-font);
+}
+
+.input input {
+  padding: 1em;
+  border: none;
+  border-radius: 0.3rem;
+  font-family: var(--paragraph-font);
+}
+
+form button,
+.mission-info button {
+  border: none;
+  padding: 1em;
+  background-color: var(--brown);
+  font-family: var(--paragraph-font);
+  font-size: 2.1ch;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  color: var(--main-bgcolor);
+  margin-top: 0.8rem;
+}
+
+@media screen and (max-width: 1300px) {
+  .hero img {
+    max-width: 60%;
+  }
+
+  .decode-info-img img {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section {
+    padding: 4rem;
+  }
+
+  .festival-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .festival-text p {
+    font-size: 2.5ch;
+  }
+
+  .hero p {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .decode-info-box {
+    display: grid;
+  }
+
+  .decode-info-img img {
+    width: 100%;
+    aspect-ratio: 1/0.4;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .hero h1 {
+    font-size: 5ch;
+  }
+
+  .mission {
+    grid-template-columns: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero h1 {
+    font-size: 4ch;
+  }
+
+  .hero p {
+    min-width: 100%;
+  }
+
+  .decode-box {
+    gap: 1rem;
+  }
+
+  section {
+    padding: 4rem 2rem;
+  }
+
+  .attend-info p {
+    min-width: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .festival-box {
+    grid-template-columns: 1fr;
+  }
+
+  .hero p,
+  .decode-info-text p,
+  .festival-text p,
+  .attend-info p,
+  .mission-info p {
+    font-size: 2ch;
+  }
+
+  header {
+    padding-inline: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3ch;
+  }
+
+  section > h1,
+  .decode-info-text h4,
+  .attend h1,
+  .mission-info > h1 {
+    font-size: 3.5ch;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .hero h1 {
+    font-size: 2.2ch;
+  }
+
+  .hero img {
+    max-width: 100%;
+  }
+
+  section > h1,
+  .decode-info-text h4,
+  .attend h1,
+  .mission-info > h1 {
+    font-size: 3ch;
+  }
+
+  .decode-info-img img {
+    aspect-ratio: 1/0.8;
+  }
+
+  .attend-info p {
+    max-width: 100%;
+  }
+
+  .hero p,
+  .decode-info-text p,
+  .festival-text p,
+  .attend-info p,
+  .mission-info p {
+    font-size: 1.8ch;
+  }
+}
