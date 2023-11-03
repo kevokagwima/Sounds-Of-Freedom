@@ -56,10 +56,54 @@ html {
   margin-inline: auto;
 }
 
+.fest-image {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.fest-image video {
+  max-height: 20rem;
+  max-width: 40;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  background-color: var(--highlight-bgcolor);
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  margin: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-btn img {
+  height: 2.5rem;
+  transform: translateY(0.5rem);
+  margin-left: 0.4rem;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.3rem;
+  z-index: 2;
+}
+
 .container a {
   text-decoration: none;
   font-family: var(--links-font);
   color: var(--highlight-bgcolor);
+  font-weight: bold;
+}
+
+.active {
+  z-index: -1;
 }
 
 @media screen and (max-width: 900px) {
