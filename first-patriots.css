@@ -1,0 +1,160 @@
+.patriots {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.patriots-info {
+  max-width: 100%;
+  text-align: left;
+  gap: 0;
+}
+
+#back {
+  background-color: var(--highlight-bgcolor);
+  padding: 0.4em 1rem;
+  border-radius: 30rem;
+  max-width: max-content;
+  color: var(--main-bgcolor);
+  font-family: var(--paragraph-font);
+  font-size: 1.8ch;
+  margin-bottom: 2rem;
+}
+
+.patriots-info h1 {
+  text-transform: uppercase;
+}
+
+.patriots-info p {
+  margin-block: 1.5rem;
+  color: yellow;
+  font-size: 2.3ch;
+}
+
+.patriots-info span {
+  font-family: var(--paragraph-font);
+  margin-bottom: 0.3rem;
+}
+
+.patriots-btns {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.patriots-btns a {
+  background-color: greenyellow;
+  padding: 1em 2em;
+  border-radius: 30rem;
+  color: #212121;
+  font-family: var(--header-font);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.patriots-image {
+  min-height: 20rem;
+  aspect-ratio: 1/1;
+  background-image: url(./Images/First\ patriots\ iv-min.png);
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .patriots {
+    padding-inline: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .patriots-info h1 {
+    font-size: 5ch;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .patriots-info h1 {
+    font-size: 4ch;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .patriots {
+    grid-template-columns: 1fr;
+  }
+
+  .patriots-info h1 {
+    font-size: 6ch;
+  }
+
+  .patriots-info p {
+    font-size: 2.3ch;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .patriots-info h1 {
+    font-size: 4.5ch;
+  }
+
+  .patriots-info p {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .patriots {
+    padding-inline: 2rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 3.8ch;
+  }
+
+  .patriots-info p {
+    font-size: 2ch;
+  }
+
+  .patriots-btns {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .patriots-info h1 {
+    font-size: 2.5ch;
+  }
+
+  .patriots-info p,
+  .patriots-info span {
+    font-size: 1.6ch;
+  }
+
+  .patriots-btns a {
+    font-size: 1.6ch;
+  }
+
+  .patriots-image {
+    min-height: 17rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .patriots-info h1 {
+    font-size: 2.2ch;
+  }
+
+  .patriots-btns a {
+    font-size: 1.5ch;
+  }
+
+  .patriots-image {
+    min-height: 11rem;
+  }
+}

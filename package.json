@@ -1,0 +1,27 @@
+{
+  "name": "SOF",
+  "version": "1.0.0",
+  "description": "<p>Link to the webisite</p>\r <a target=\"_blank\" href=\"https://sofafrica.com\">sofafrica.com</a>",
+  "main": "index.js",
+  "dependencies": {
+    "abort-controller": "^3.0.0",
+    "dotenv": "^16.3.1",
+    "mongodb": "^6.2.0",
+    "mssql": "^9.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevokagwima/Sounds-Of-Freedom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevokagwima/Sounds-Of-Freedom/issues"
+  },
+  "homepage": "https://github.com/kevokagwima/Sounds-Of-Freedom#readme"
+}

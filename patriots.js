@@ -23,21 +23,3 @@ close.addEventListener("click", () => {
   options.style.display = "grid";
   close.style.display = "none";
 });
-
-const all_teams = window.localStorage.getItem("Air Force");
-console.log(all_teams);
-
-register_form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const formData = {
-    fname: document.getElementById("fname").value,
-    lname: document.getElementById("surname").value,
-    team: document.getElementById("team").value,
-  };
-  console.log(formData);
-  if (window.localStorage.getItem(formData.team)) {
-    console.log("Team already exists");
-  } else {
-    window.localStorage.setItem(`${formData.team}`, formData);
-  }
-});

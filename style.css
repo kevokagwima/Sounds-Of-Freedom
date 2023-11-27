@@ -167,7 +167,7 @@ header {
 
 .festival-banner {
   min-height: 35rem;
-  background-color: rgb(51, 37, 37);
+  background-color: rgb(0, 0, 0);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -178,6 +178,10 @@ header {
   display: grid;
   gap: 0.6rem;
   color: var(--main-bgcolor);
+}
+
+.fest-info h1 {
+  font-size: 6ch;
 }
 
 .fest-info h4 {
@@ -222,6 +226,45 @@ header {
   cursor: pointer;
   background-color: var(--highlight-bgcolor);
   color: var(--main-bgcolor);
+}
+
+.patriots {
+  min-height: 30rem;
+  background-image: url(./Images/patriots-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patriots-info {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  color: whitesmoke;
+  max-width: 60%;
+}
+
+.patriots-info h1 {
+  color: var(--main-bgcolor);
+  font-size: 6ch;
+}
+
+.patriots-info p {
+  font-size: 2.5ch;
+  line-height: 1.5;
+}
+
+#patriots {
+  background-color: var(--highlight-bgcolor);
+  padding: 1em 2em;
+  font-family: var(--header-font);
+  color: var(--main-bgcolor);
+  max-width: max-content;
+  margin: 2rem auto 0;
+  border-radius: 30rem;
+  cursor: pointer;
 }
 
 .video {
@@ -1492,6 +1535,10 @@ video[poster] {
     font-size: 2.5ch;
   }
 
+  .patriots-info {
+    max-width: 100%;
+  }
+
   .hero-info p {
     max-width: max-content;
     font-size: 4ch;
@@ -1854,6 +1901,14 @@ video[poster] {
     row-gap: 2rem;
   }
 
+  .patriots-info h1 {
+    font-size: 5ch;
+  }
+
+  .patriots-info p {
+    font-size: 2.3ch;
+  }
+
   .hero-info h1 {
     font-size: 12ch;
     max-width: 90%;
@@ -2127,7 +2182,8 @@ video[poster] {
   .exhibition,
   .festival,
   .first-patriots,
-  .audio-film {
+  .audio-film,
+  .patriots {
     padding: 3rem 2rem;
   }
 
@@ -2148,6 +2204,14 @@ video[poster] {
 
   .hero-image img {
     max-height: 12rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 4.5ch;
+  }
+
+  .patriots-info p {
+    font-size: 2ch;
   }
 
   .scroll-down {
@@ -2272,7 +2336,7 @@ video[poster] {
   .first-patriots,
   .linkedin,
   .festival-banner,
-  .audio-film {
+  .audio-box {
     padding: 3rem 1rem;
   }
 
@@ -2293,6 +2357,14 @@ video[poster] {
 
   .hero-image img {
     height: 15rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 4ch;
+  }
+
+  .patriots-info p {
+    font-size: 2ch;
   }
 
   h1 {
@@ -2400,6 +2472,10 @@ video[poster] {
 
   .fest-info p {
     font-size: 1.8ch;
+  }
+
+  .patriots-info h1 {
+    font-size: 3.5ch;
   }
 
   .fest-btns button {
@@ -2620,6 +2696,10 @@ video[poster] {
     font-size: 1.8ch;
   }
 
+  .patriots-info h1 {
+    font-size: 3ch;
+  }
+
   .audio-box p,
   .audio-box span {
     font-size: 1.5ch;
@@ -2746,7 +2826,8 @@ video[poster] {
   .about-info p,
   .event-box div p,
   .linkedin-info p,
-  .afrika-text p {
+  .afrika-text p,
+  .patriots-info p {
     font-size: 1.8ch;
   }
 
