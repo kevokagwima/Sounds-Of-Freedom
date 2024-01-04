@@ -81,6 +81,22 @@ header {
   align-items: center;
 }
 
+#gallery {
+  position: relative;
+}
+
+#new {
+  position: absolute;
+  top: -0.9rem;
+  right: -1rem;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  border-radius: 30rem;
+  font-family: var(--paragraph-font);
+  font-size: 0.8ch;
+  padding: 0.2rem 0.3rem;
+}
+
 #link {
   color: #212121;
   font-family: var(--links-font);
@@ -93,6 +109,38 @@ header {
 
 #logo img {
   max-height: 3rem;
+}
+
+.n-fest {
+  position: relative;
+}
+
+.n-fest p {
+  cursor: pointer;
+}
+
+.n-fest:hover .n-fest-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.n-fest-links {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: var(--main-bgcolor);
+  display: grid;
+  gap: 1rem;
+  position: absolute;
+  top: 2.5rem;
+  min-width: max(10rem, 100%);
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 10px -8px rgb(0, 0, 0);
+}
+
+.n-fest-links a {
+  font-family: var(--paragraph-font);
 }
 
 .subscribe {
@@ -269,6 +317,59 @@ header {
 
 .video {
   max-height: 1rem;
+}
+
+.cinema {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  align-items: center;
+  background-color: var(--main-bgcolor);
+}
+
+.cinema-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.cinema-info p {
+  font-size: 2.2ch;
+}
+
+.cinema-info span {
+  font-weight: bold;
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+}
+
+.cinema-btn {
+  margin-top: 1rem;
+}
+
+.cinema-btn button {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1em;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  cursor: pointer;
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+}
+
+.cinema-image {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px -7px black;
+}
+
+.cinema-image {
+  background-image: url("./Images/Poetry.png");
+  background-size: cover;
+  background-position: top center;
+  min-height: 41rem;
+  max-height: 41rem;
+  border-radius: 0.3rem;
 }
 
 .hero {
@@ -523,13 +624,16 @@ header {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   max-width: max-content;
-  margin: 1rem auto;
-  outline: 1px solid var(--main-bgcolor);
+  margin: 1rem 0;
+  outline: 1px solid #212121;
   border-radius: 0.3rem;
 }
 
-.mpesa div {
+.mpesa-logo,
+.paybill,
+.account-info {
   padding: 0.5rem;
+  text-align: center;
 }
 
 .mpesa h4 {
@@ -539,7 +643,7 @@ header {
 }
 
 .mpesa-logo {
-  border-right: 1px solid var(--main-bgcolor);
+  border-right: 1px solid #212121;
 }
 
 .mpesa-logo img {
@@ -548,7 +652,7 @@ header {
 
 .account-info {
   grid-column: 1/3;
-  border-top: 1px solid var(--main-bgcolor);
+  border-top: 1px solid #212121;
 }
 
 .audio-btn {
@@ -1202,7 +1306,8 @@ video[poster] {
   .exhibition,
   .festival,
   .first-patriots,
-  .festival-banner {
+  .festival-banner,
+  .cinema {
     padding: 3rem;
   }
 
@@ -1751,15 +1856,8 @@ video[poster] {
     background-position: left;
   }
 
-  .hero,
-  .about,
-  .premier,
-  .exhibition,
-  .festival,
-  .first-patriots,
-  .linkedin,
-  .audio-film {
-    padding: 3rem;
+  .cinema {
+    grid-template-columns: 1fr;
   }
 
   .audio-box {
@@ -1974,7 +2072,8 @@ video[poster] {
   .heroes p,
   .exhibition p,
   .patriot p,
-  .about-info p {
+  .about-info p,
+  .cinema-info p {
     font-size: 2ch;
   }
 
@@ -2144,7 +2243,8 @@ video[poster] {
   .heroes p,
   .exhibition p,
   .patriot p,
-  .about-info p {
+  .about-info p,
+  .cinema-info p {
     font-size: 2ch;
   }
 
@@ -2291,7 +2391,8 @@ video[poster] {
   .heroes p,
   .exhibition p,
   .patriot p,
-  .about-info p {
+  .about-info p,
+  .cinema-info p {
     font-size: 2ch;
   }
 
@@ -2336,8 +2437,14 @@ video[poster] {
   .first-patriots,
   .linkedin,
   .festival-banner,
-  .audio-box {
+  .audio-box,
+  .cinema {
     padding: 3rem 1rem;
+  }
+
+  .cinema-image {
+    min-height: 30rem;
+    max-height: 30rem;
   }
 
   .hero-info h1 {
@@ -2622,7 +2729,8 @@ video[poster] {
   .heroes p,
   .exhibition p,
   .patriot p,
-  .about-info p {
+  .about-info p,
+  .cinema-info p {
     font-size: 1.8ch;
   }
 
@@ -2827,7 +2935,8 @@ video[poster] {
   .event-box div p,
   .linkedin-info p,
   .afrika-text p,
-  .patriots-info p {
+  .patriots-info p,
+  .cinema-info p {
     font-size: 1.8ch;
   }
 
@@ -2977,7 +3086,8 @@ video[poster] {
   .exhibition p,
   .patriot p,
   .festival-box p,
-  .about-info p {
+  .about-info p,
+  .cinema-info p {
     font-size: 1.5ch;
   }
 

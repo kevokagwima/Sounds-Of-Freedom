@@ -33,9 +33,28 @@
   font-size: 2.3ch;
 }
 
-.patriots-info span {
+#more-info {
+  display: grid;
+}
+
+#more-info span {
   font-family: var(--paragraph-font);
-  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.8ch;
+}
+
+#more-info span i {
+  font-size: 2ch;
+  transform: translateY(0.15rem);
+}
+
+#more {
+  margin-top: 1rem;
+  align-self: baseline;
 }
 
 .patriots-btns {
@@ -124,6 +143,10 @@
     gap: 1rem;
     grid-template-columns: 1fr;
   }
+
+  #more-info span {
+    font-size: 1.8ch;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -131,9 +154,12 @@
     font-size: 2.5ch;
   }
 
-  .patriots-info p,
-  .patriots-info span {
-    font-size: 1.6ch;
+  .patriots-info p {
+    font-size: 1.8ch;
+  }
+
+  #more-info span {
+    font-size: 1.5ch;
   }
 
   .patriots-btns a {
