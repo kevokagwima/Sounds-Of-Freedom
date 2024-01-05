@@ -1492,6 +1492,14 @@ video[poster] {
 }
 
 @media screen and (max-width: 1200px) {
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
   .subscribe-btn {
     top: 10rem;
     left: 5.8rem;
@@ -2131,14 +2139,6 @@ video[poster] {
 }
 
 @media screen and (max-width: 800px) {
-  .links {
-    display: none;
-  }
-
-  .burger {
-    display: flex;
-  }
-
   .hero {
     background-size: 150% 100%;
   }
