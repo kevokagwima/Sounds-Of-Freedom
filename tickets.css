@@ -100,11 +100,32 @@ form {
   gap: 0.8rem;
 }
 
+.payment-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: 100%;
+}
+
+.payment-info p {
+  font-family: var(--paragraph-font);
+  padding: 0.5em;
+  border-radius: 0.3rem;
+  background-color: var(--highlight-bgcolor);
+  outline: 1px solid var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+}
+
+.payment-info p:last-child {
+  grid-column: 1/3;
+}
+
 form button,
 .note,
 .mpesa,
 .more-inputs,
-.more-people {
+.more-people,
+.payment-info {
   grid-column: 1/3;
 }
 
@@ -199,11 +220,17 @@ form button {
     min-width: 60vw;
   }
 
+  .payment-info {
+    grid-template-columns: 1fr;
+  }
+
   form button,
   .note,
   .mpesa,
   .more-inputs,
-  .more-people {
+  .more-people,
+  .payment-info,
+  .payment-info p:last-child {
     grid-column: 1/2;
   }
 
