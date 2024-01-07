@@ -14,6 +14,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
   side_nav.classList.remove("show-side-nav");
+  cinema.classList.remove("show-cinema");
 });
 
 burger.addEventListener("click", () => {
@@ -22,6 +23,13 @@ burger.addEventListener("click", () => {
 
 close_sidenav.addEventListener("click", () => {
   side_nav.classList.toggle("show-side-nav");
+});
+
+const cinema = document.querySelector(".cinema-drop-down");
+const gallery = document.querySelector(".gallery");
+
+gallery.addEventListener("mouseover", () => {
+  cinema.classList.add("show-cinema");
 });
 
 const ctrlVideo = document.querySelectorAll("#video");

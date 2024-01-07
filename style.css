@@ -81,8 +81,44 @@ header {
   align-items: center;
 }
 
-#gallery {
+#gallery,
+.gallery {
   position: relative;
+}
+
+.gallery {
+  cursor: pointer;
+}
+
+.cinema-drop-down {
+  position: absolute;
+  background-color: var(--main-bgcolor);
+  top: 4rem;
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+}
+
+.show-cinema {
+  transition: 250ms ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.cinema-drop-down a {
+  font-family: var(--paragraph-font);
+  color: black;
+}
+
+.cinema-drop-down a:hover {
+  color: var(--highlight-bgcolor);
 }
 
 #new {
