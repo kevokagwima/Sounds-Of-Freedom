@@ -404,6 +404,12 @@ header {
   font-weight: bold;
 }
 
+#total {
+  margin-top: 1rem;
+  font-size: 3ch;
+  color: greenyellow;
+}
+
 .cinema-btn {
   margin-top: 1rem;
   display: flex;
