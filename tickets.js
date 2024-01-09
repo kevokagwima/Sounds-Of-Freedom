@@ -16,33 +16,16 @@ const code = `<h4>Other person's details</h4>
   <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
 </div>
 `;
-
+const total = document.getElementById("total-amount");
+const usersDiv = document.getElementById("users");
+let final = 950;
+let users = 1;
 const more_btn = document.querySelector(".more-people");
 const more = document.querySelector(".more-inputs");
 more_btn.addEventListener("click", () => {
   more.innerHTML += code;
-});
-
-const submit = document.getElementById("submit");
-
-submit.addEventListener("click", () => {
-  const phone = document.getElementById("phone");
-  var url = "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest";
-  fetch(url, {
-    headers: {
-      BusinessShortCode: "5242257",
-      Password:
-        "MTc0Mzc5YmZiMjc5ZjlhYTliZGJjZjE1OGU5N2RkNzFhNDY3Y2QyZTBjODkzMDU5YjEwZjc4ZTZiNzJhZGExZWQyYzkxOTIwMTYwMjE2MTY1NjI3",
-      Timestamp: "20160216165627",
-      TransactionType: "CustomerPayBillOnline",
-      Amount: "1",
-      PartyA: "0796897011",
-      PartyB: "5242257",
-      PhoneNumber: "254708374149",
-      CallBackURL: "https://sofafrica.com/",
-      AccountReference: "Test",
-      TransactionDesc: "Test",
-    },
-  });
-  console.log("hello");
+  final = parseInt(total.innerHTML) + 950;
+  users = parseInt(usersDiv.innerHTML) + 1;
+  total.innerHTML = final;
+  usersDiv.innerHTML = users;
 });

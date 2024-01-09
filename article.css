@@ -456,6 +456,10 @@ a {
   .info-bar div p {
     font-size: 3ch;
   }
+
+  .payment-info p {
+    font-size: 1.8ch;
+  }
 }
 
 @media screen and (max-width: 300px) {

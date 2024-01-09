@@ -22,71 +22,91 @@
   <div class="form">
     <a href="index.html" id="back">Back</a>
     <h1 class="header">Book your slot now</h1>
-    <form id='form' method='post' name='Cinema-in-Nature' value='Cinema inn Nature Experience'><input type='hidden'
-        name='form-name' value='Audio-film-series' />
-      <div class="input">
-        <label for="fname">First Name</label>
-        <input name="First Name" required type="text" id="fname" placeholder="First Name">
+    <div class="form-box">
+      <form id='form' method='post' name='Cinema-in-Nature' value='Cinema inn Nature Experience'><input type='hidden'
+          name='form-name' value='Audio-film-series' />
+        <div class="input">
+          <label for="fname">First Name</label>
+          <input name="First Name" required type="text" id="fname" placeholder="First Name">
+        </div>
+        <div class="input">
+          <label for="surname">Last Name</label>
+          <input name="Surname" required type="text" id="surname" placeholder="Last Name">
+        </div>
+        <div class="input">
+          <label for="email">Email Address</label>
+          <input name="email" required type="email" id="email" placeholder="Email Address">
+        </div>
+        <div class="input">
+          <label for="phone">Phone Number</label>
+          <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
+        </div>
+        <div class="more-inputs"></div>
+        <div class="more-people">
+          <p>+ Add person</p>
+        </div>
+        <div class="payment-info">
+          <p>Cinema in Nature = 500/-</p>
+          <p>Listen & Paint = 200/-</p>
+          <p>Karura entrance fee + Picnic fee = 250/-</p>
+          <p id="total">Total 950/-</p>
+        </div>
+        <div class="input mpesa">
+          <label for="org">Mpesa Confirmation Code (Paybill: 5242257)</label>
+          <input name="Organization" required type="text" id="org" placeholder="Mpesa Confirmation Code">
+        </div>
+        <div class="input mpesa">
+          <label for="listen">Have you listened to our first episode before?</label>
+          <select required name="listened_to_our_episode" id="listen">
+            <option selected disabled value="">----</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <!-- <div class="note info">
+          <p>Sunday 3pm is a crowd favourite! Join the group?</p>
+        </div> -->
+        <div class="input">
+          <label for="day">Pick The Day</label>
+          <select required name="day" id="day">
+            <option selected value="">---</option>
+            <option value="Saturday 20">Saturday 20th</option>
+            <!-- <option value="Saturday 27">Saturday 27th</option> -->
+          </select>
+        </div>
+        <div class="input">
+          <label for="time">Pick Time Slot</label>
+          <select required name="time-slot" id="time">
+            <option disabled selected value="">---</option>
+            <option value="10:30 am">10:30 am</option>
+            <!-- <option value="3pm">3pm</option> -->
+          </select>
+        </div>
+        <div class="note">
+          <p>Visitors must arrive 15-30 minutes before.</p>
+          <p> Meeting point: Karura Forest Gate C Entrance, Kiambu Road</p>
+          <p>Contact: 0712443592</p>
+        </div>
+        <button id="submit" type="submit">Book</button>
+      </form>
+      <div class="order-box">
+        <h1>Your Total Order</h1>
+        <hr>
+        <div class="order-box-info">
+          <div class="order-heading">
+            <h4>Ksh <span id="total-amount">950</span></h4>
+          </div>
+          <div class="order-users">
+            <p>x <span id="users">1</span></p>
+          </div>
+        </div>
+        <hr>
+        <div class="order-note">
+          <p>Latecomers and no-shows will not be refunded.</p>
+          <p>Cancelations less than 48hrs before will not be refunded.</p>
+        </div>
       </div>
-      <div class="input">
-        <label for="surname">Last Name</label>
-        <input name="Surname" required type="text" id="surname" placeholder="Last Name">
-      </div>
-      <div class="input">
-        <label for="email">Email Address</label>
-        <input name="email" required type="email" id="email" placeholder="Email Address">
-      </div>
-      <div class="input">
-        <label for="phone">Phone Number</label>
-        <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
-      </div>
-      <div class="more-inputs"></div>
-      <div class="more-people">
-        <p>+ Add person</p>
-      </div>
-      <div class="payment-info">
-        <p>Cinema in Nature = 500/-</p>
-        <p>Listen & Paint = +200/-</p>
-        <p>Karura entance fee = Paid at Venue</p>
-      </div>
-      <div class="input mpesa">
-        <label for="org">Mpesa Confirmation Code (Paybill: 5242257)</label>
-        <input name="Organization" required type="text" id="org" placeholder="Mpesa Confirmation Code">
-      </div>
-      <div class="input mpesa">
-        <label for="listen">Have you listened to our first episode before?</label>
-        <select required name="listened_to_our_episode" id="listen">
-          <option selected disabled value="">----</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select>
-      </div>
-      <!-- <div class="note info">
-        <p>Sunday 3pm is a crowd favourite! Join the group?</p>
-      </div> -->
-      <div class="input">
-        <label for="day">Pick The Day</label>
-        <select required name="day" id="day">
-          <option selected value="">---</option>
-          <option value="Saturday 20">Saturday 20th</option>
-          <option value="Saturday 27">Saturday 27th</option>
-        </select>
-      </div>
-      <div class="input">
-        <label for="time">Pick Time Slot</label>
-        <select required name="time-slot" id="time">
-          <option disabled selected value="">---</option>
-          <option value="11am">11am</option>
-          <option value="3pm">3pm</option>
-        </select>
-      </div>
-      <div class="note">
-        <p>Visitors must arrive 15-30 minutes before.</p>
-        <p> Meeting point: Karura Forest Gate C Entrance, Kiambu Road</p>
-        <p>Contact: 0712443592</p>
-      </div>
-      <button id="submit" type="submit">Book</button>
-    </form>
+    </div>
   </div>
 </body>
 <script src="tickets.js"></script>
