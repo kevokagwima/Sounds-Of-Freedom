@@ -73,6 +73,7 @@ a {
   font-family: var(--special-font);
   font-size: 8ch;
   margin-top: 1rem;
+  color: var(--highlight-bgcolor);
 }
 
 .audio-box h4 {
@@ -91,6 +92,10 @@ a {
   font-family: var(--header-font);
   font-size: 4ch;
   margin-top: 2rem;
+}
+
+#text-span {
+  font-family: var(--paragraph-font);
 }
 
 .mpesa {
@@ -136,14 +141,15 @@ a {
 
 .payment-info p {
   padding: 0.5em;
-  background-color: var(--highlight-bgcolor);
-  color: var(--main-bgcolor);
+  background-color: var(--main-bgcolor);
+  color: #212121;
+  font-weight: bold;
   border-radius: 0.3rem;
   max-width: max-content;
+  font-size: 2ch;
 }
 
 #total {
-  margin-top: 1rem;
   font-size: 3ch;
   color: greenyellow;
   padding: 0;
@@ -188,7 +194,7 @@ a {
   background-color: white;
   border-radius: 0.3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   gap: 2rem;
   padding: 1rem;

@@ -60,9 +60,95 @@ a {
   inset: 2rem auto auto 5rem;
 }
 
+.pricing {
+  padding: 5rem 2rem;
+}
+
+.pricing > h1 {
+  text-align: center;
+  color: var(--main-bgcolor);
+  font-family: var(--header-font);
+}
+
+.pricing-box {
+  display: grid;
+  justify-content: center;
+  background-color: var(--highlight-bgcolor);
+  max-width: max-content;
+  margin: 2rem auto 0;
+  padding: 2rem;
+}
+
+.columns > h1 {
+  text-align: center;
+  color: var(--highlight-bgcolor);
+  font-family: var(--header-font);
+}
+
+.columns {
+  padding: 2rem;
+  max-width: 25rem;
+  background-color: var(--main-bgcolor);
+  border-radius: 0.3rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.price-box {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.price-box p {
+  transform: translateY(0.5rem);
+  font-size: 2.2ch;
+  font-family: var(--paragraph-font);
+}
+
+.price-box h1 {
+  font-size: 10ch;
+  font-family: var(--links-font);
+  font-weight: bold;
+}
+
+.price-info {
+  font-family: var(--links-font);
+  font-size: 1.8ch;
+  text-align: center;
+}
+
+.price-btn {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.button {
+  background-color: green;
+  border: none;
+  border-radius: 0.3rem;
+  color: white;
+  padding: 1em 2em;
+  font-size: 2.5ch;
+  text-decoration: none;
+  font-family: var(--header-font);
+  cursor: pointer;
+}
+
 .form {
   margin-top: 3rem;
   padding: 1rem;
+  display: none;
+}
+
+.hide-pricing {
+  display: none;
+}
+
+.show-form {
+  display: block;
 }
 
 .header {
@@ -84,6 +170,7 @@ a {
   border-radius: 0.3rem;
   background-color: var(--main-bgcolor);
   height: max-content;
+  /* max-width: 25rem; */
 }
 
 .order-box hr {
@@ -98,7 +185,11 @@ a {
 }
 
 .order-box-info {
-  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.order {
   display: flex;
   gap: 2rem;
   justify-content: center;
@@ -119,6 +210,17 @@ a {
 
 .order-users {
   font-family: var(--paragraph-font);
+}
+
+.order-text p {
+  font-family: var(--links-font);
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--highlight-bgcolor);
+  padding: 0.5em;
+  border-radius: 0.3rem;
+  color: var(--main-bgcolor);
+  font-size: 1.8ch;
 }
 
 .order-note {
@@ -267,7 +369,7 @@ form button {
 
 @media screen and (max-width: 1100px) {
   .form-box {
-    flex-direction: column;
+    flex-direction: column-reverse;
     max-width: 60%;
     margin-inline: auto;
   }
@@ -325,6 +427,14 @@ form button {
   .more-inputs h4 {
     grid-column: 1/2;
   }
+
+  .columns > h1 {
+    font-size: 2.5ch;
+  }
+
+  .price-info p {
+    font-size: 1.6ch;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -339,5 +449,28 @@ form button {
 
   input {
     width: 100%;
+  }
+
+  .pricing > h1,
+  .columns > h1 {
+    font-size: 2.2ch;
+  }
+
+  .price-info p {
+    font-size: 1.5ch;
+    text-align: left;
+  }
+
+  .columns,
+  .pricing-box {
+    padding-inline: 1rem;
+  }
+
+  .pricing-box {
+    padding-inline: 0;
+  }
+
+  .columns {
+    max-width: 35rem;
   }
 }

@@ -13,14 +13,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Cinema In Nature Tickets">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./images/Poetry.png">
+  <meta property="og:url" content="https://sofafrica.com/tickets">
+  <meta property="og:site_name" content="Sounds Of Freedom">
   <link rel="shortcut icon" href="/Images/output-onlinepngtools.png">
   <link rel="stylesheet" href="tickets.css">
   <title>Get Your Tickets</title>
 </head>
 
 <body>
+  <a href="index.html" id="back">Back</a>
+  <section class="pricing">
+    <h1>Explore the Magic of Nature Cinema in Karura Forest!</h1>
+    <div class="pricing-box">
+      <div class="columns">
+        <h1>Cinema in Nature + Picnic and Paint Experience</h1>
+        <div class="price-box">
+          <p>Kes</p>
+          <h1>950</h1>
+        </div>
+        <div class="price-info">
+          <p>Latecomers and no-shows will not be refunded.</p>
+          <p>Cancelations less than 48hrs before will not be refunded.</p>
+        </div>
+        <div class="price-btn">
+          <button class="button">Book ticket</button>
+        </div>
+      </div>
+    </div>
+  </section>
   <div class="form">
-    <a href="index.html" id="back">Back</a>
     <h1 class="header">Book your slot now</h1>
     <div class="form-box">
       <form id='form' method='post' name='Cinema-in-Nature' value='Cinema inn Nature Experience'><input type='hidden'
@@ -45,12 +69,12 @@
         <div class="more-people">
           <p>+ Add person</p>
         </div>
-        <div class="payment-info">
+        <!-- <div class="payment-info">
           <p>Cinema in Nature = 500/-</p>
           <p>Listen & Paint = 200/-</p>
           <p>Karura entrance fee + Picnic fee = 250/-</p>
           <p id="total">Total 950/-</p>
-        </div>
+        </div> -->
         <div class="input mpesa">
           <label for="org">Mpesa Confirmation Code (Paybill: 5242257)</label>
           <input name="Organization" required type="text" id="org" placeholder="Mpesa Confirmation Code">
@@ -90,14 +114,19 @@
         <button id="submit" type="submit">Book</button>
       </form>
       <div class="order-box">
-        <h1>Your Total Order</h1>
+        <h1>Price</h1>
         <hr>
         <div class="order-box-info">
-          <div class="order-heading">
-            <h4>Ksh <span id="total-amount">950</span></h4>
+          <div class="order">
+            <div class="order-heading">
+              <h4>Ksh <span id="total-amount">950</span></h4>
+            </div>
+            <div class="order-users">
+              <p>x <span id="users">1</span></p>
+            </div>
           </div>
-          <div class="order-users">
-            <p>x <span id="users">1</span></p>
+          <div class="order-text">
+            <p>Includes: Cinema in Nature + Picnic and Paint Experience</p>
           </div>
         </div>
         <hr>

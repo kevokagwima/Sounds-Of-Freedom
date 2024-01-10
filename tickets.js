@@ -29,3 +29,12 @@ more_btn.addEventListener("click", () => {
   total.innerHTML = final;
   usersDiv.innerHTML = users;
 });
+
+const showForm = document.querySelector(".form");
+const showButton = document.querySelector(".button");
+const pricing = document.querySelector(".pricing");
+
+showButton.addEventListener("click", () => {
+  pricing.classList.add("hide-pricing");
+  showForm.classList.add("show-form");
+});
