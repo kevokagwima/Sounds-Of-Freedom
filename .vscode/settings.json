@@ -1,5 +1,6 @@
 {
   "terminal.integrated.enablePersistentSessions": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
-  "git.ignoreLimitWarning": true
+  "git.ignoreLimitWarning": true,
+  "liveServer.settings.port": 5501
 }

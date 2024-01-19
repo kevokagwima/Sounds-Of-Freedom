@@ -29,7 +29,7 @@
     <h1>Explore the Magic of Nature Cinema in Karura Forest!</h1>
     <div class="pricing-box">
       <div class="columns">
-        <h1>Cinema in Nature + Picnic and Paint Experience</h1>
+        <h1>Citizens</h1>
         <div class="price-box">
           <p>Kes</p>
           <h1>950</h1>
@@ -42,13 +42,49 @@
           <button class="button">Book ticket</button>
         </div>
       </div>
+      <div class="columns">
+        <h1>Residents</h1>
+        <div class="price-box">
+          <p>Kes</p>
+          <h1>1,050</h1>
+        </div>
+        <div class="price-info">
+          <p>Latecomers and no-shows will not be refunded.</p>
+          <p>Cancelations less than 48hrs before will not be refunded.</p>
+        </div>
+        <div class="price-btn">
+          <button class="button">Book ticket</button>
+        </div>
+      </div>
+      <div class="columns">
+        <h1>Non-Residents</h1>
+        <div class="price-box">
+          <p>Kes</p>
+          <h1>1,450</h1>
+        </div>
+        <div class="price-info">
+          <p>Latecomers and no-shows will not be refunded.</p>
+          <p>Cancelations less than 48hrs before will not be refunded.</p>
+        </div>
+        <div class="price-btn">
+          <button class="button">Book ticket</button>
+        </div>
+      </div>
+    </div>
+    <div class="pricing-info">
+      <p>Parking is charged separately at Ksh.200 per car/Ksh.400 per minivan. Payment at the gate is cashless (strictly
+        MPESA or Credit/Visa Debit Cards).
+      </p>
+      <p>Please remember that Karura Forest is Plastic Free (i.e. single-use plastic is not allowed including pet soda
+        bottles, straws, disposable water bottles, etc.).</p>
+      <p>Alcoholic drinks are also not allowed in the forest.</p>
     </div>
   </section>
   <div class="form">
     <h1 class="header">Book your slot now</h1>
     <div class="form-box">
-      <form id='form' method='post' name='Cinema-in-Nature' value='Cinema inn Nature Experience'><input type='hidden'
-          name='form-name' value='Audio-film-series' />
+      <form action="/success/" id='form' method='post' name='Cinema-in-Nature' value='Cinema in Nature Experience'>
+        <input type='hidden' name='form-name' value='Audio-film-series' />
         <div class="input">
           <label for="fname">First Name</label>
           <input name="First Name" required type="text" id="fname" placeholder="First Name">
@@ -102,8 +138,10 @@
           <label for="time">Pick Time Slot</label>
           <select required name="time-slot" id="time">
             <option disabled selected value="">---</option>
-            <option value="10:30 am">10:30 am</option>
-            <!-- <option value="3pm">3pm</option> -->
+            <option disabled value="10:30 am">10:30 am (Sold Out)</option>
+            <option disabled value="11:30 am">11:30 am (Sold Out)</option>
+            <option disabled value="2:30 pm">2:30 pm (Sold Out)</option>
+            <option value="3:30 pm">3:30 pm</option>
           </select>
         </div>
         <div class="note">
@@ -119,10 +157,24 @@
         <div class="order-box-info">
           <div class="order">
             <div class="order-heading">
-              <h4>Ksh <span id="total-amount">950</span></h4>
+              <h4>Ksh <span id="total-amount"></span></h4>
             </div>
             <div class="order-users">
               <p>x <span id="users">1</span></p>
+            </div>
+          </div>
+          <div class="mpesa-box">
+            <div class="mpesa-logo">
+              <img src="./Images/mpesa.png" alt="Mpesa">
+              <h4>Fiction Studios</h4>
+            </div>
+            <div class="paybill">
+              <h4>Paybill</h4>
+              <p>5242257</p>
+            </div>
+            <div class="account-info">
+              <h4>Account Name</h4>
+              <p>(Your Name)</p>
             </div>
           </div>
           <div class="order-text">

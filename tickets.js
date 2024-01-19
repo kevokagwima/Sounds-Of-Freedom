@@ -16,25 +16,67 @@ const code = `<h4>Other person's details</h4>
   <input name="Phone Number" required type="number" id="phone" placeholder="Phone Number">
 </div>
 `;
-const total = document.getElementById("total-amount");
 const usersDiv = document.getElementById("users");
-let final = 950;
+
+let citizen = 950;
+let resident = 1050;
+let non_resident = 1450;
 let users = 1;
+
 const more_btn = document.querySelector(".more-people");
 const more = document.querySelector(".more-inputs");
-more_btn.addEventListener("click", () => {
-  more.innerHTML += code;
-  final = parseInt(total.innerHTML) + 950;
-  users = parseInt(usersDiv.innerHTML) + 1;
-  total.innerHTML = final;
-  usersDiv.innerHTML = users;
-});
 
 const showForm = document.querySelector(".form");
-const showButton = document.querySelector(".button");
+const showButton = document.querySelectorAll(".button");
 const pricing = document.querySelector(".pricing");
+const total_amount = document.querySelector("#total-amount");
 
-showButton.addEventListener("click", () => {
+showButton[0].addEventListener("click", () => {
   pricing.classList.add("hide-pricing");
   showForm.classList.add("show-form");
+  total_amount.innerHTML = citizen;
+  users = users;
+  localStorage.setItem("pricing", "citizen");
+});
+
+showButton[1].addEventListener("click", () => {
+  pricing.classList.add("hide-pricing");
+  showForm.classList.add("show-form");
+  total_amount.innerHTML = resident;
+  users = users;
+  localStorage.setItem("pricing", "resident");
+});
+
+showButton[2].addEventListener("click", () => {
+  pricing.classList.add("hide-pricing");
+  showForm.classList.add("show-form");
+  total_amount.innerHTML = non_resident;
+  users = users;
+  localStorage.setItem("pricing", "non-resident");
+});
+
+more_btn.addEventListener("click", () => {
+  more.innerHTML += code;
+  var pricing = localStorage.getItem("pricing");
+  if (pricing == "citizen") {
+    let final;
+    final = parseInt(total_amount.innerHTML) + citizen;
+    users = parseInt(usersDiv.innerHTML) + 1;
+    total_amount.innerHTML = final;
+    usersDiv.innerHTML = users;
+  }
+  if (pricing == "resident") {
+    let final;
+    final = parseInt(total_amount.innerHTML) + resident;
+    users = parseInt(usersDiv.innerHTML) + 1;
+    total_amount.innerHTML = final;
+    usersDiv.innerHTML = users;
+  }
+  if (pricing == "non-resident") {
+    let final;
+    final = parseInt(total_amount.innerHTML) + non_resident;
+    users = parseInt(usersDiv.innerHTML) + 1;
+    total_amount.innerHTML = final;
+    usersDiv.innerHTML = users;
+  }
 });

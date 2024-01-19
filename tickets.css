@@ -70,8 +70,24 @@ a {
   font-family: var(--header-font);
 }
 
+.pricing-info {
+  margin-top: 2rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.pricing-info p {
+  text-align: center;
+  color: var(--main-bgcolor);
+  font-family: var(--paragraph-font);
+  max-width: 50%;
+  margin-inline: auto;
+}
+
 .pricing-box {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
   justify-content: center;
   background-color: var(--highlight-bgcolor);
   max-width: max-content;
@@ -209,6 +225,46 @@ a {
 }
 
 .order-users {
+  font-family: var(--paragraph-font);
+}
+
+.mpesa-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  max-width: max-content;
+  margin: 1rem auto 0;
+  outline: 1px solid var(--main-bgcolor);
+  border-radius: 0.3rem;
+  outline: 1px solid grey;
+}
+
+.mpesa-box div {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.mpesa-box h4 {
+  font-size: 2ch;
+  font-family: var(--header-font);
+  margin: 0;
+}
+
+.mpesa-logo {
+  border-right: 1px solid grey;
+}
+
+.mpesa-logo img {
+  max-height: 2rem;
+}
+
+.account-info {
+  grid-column: 1/3;
+  border-top: 1px solid grey;
+}
+
+.paybill p,
+.account-info p {
   font-family: var(--paragraph-font);
 }
 
@@ -373,6 +429,15 @@ form button {
     max-width: 60%;
     margin-inline: auto;
   }
+
+  .pricing-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-info p {
+    max-width: 100%;
+    font-size: 1.6ch;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -435,6 +500,10 @@ form button {
   .price-info p {
     font-size: 1.6ch;
   }
+
+  .pricing-box {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -472,5 +541,11 @@ form button {
 
   .columns {
     max-width: 35rem;
+  }
+
+  .mpesa-logo h4,
+  .account-info h4,
+  .paybill h4 {
+    font-size: 1.6ch;
   }
 }
