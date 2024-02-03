@@ -82,6 +82,14 @@ a {
   font-family: var(--paragraph-font);
   max-width: 50%;
   margin-inline: auto;
+  font-weight: bold;
+}
+
+#bold {
+  background-color: white;
+  color: #212121;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
 }
 
 .pricing-box {
@@ -133,7 +141,9 @@ a {
 .price-info {
   font-family: var(--links-font);
   font-size: 1.8ch;
-  text-align: center;
+  text-align: left;
+  display: grid;
+  gap: 0.3rem;
 }
 
 .price-btn {
@@ -256,6 +266,14 @@ a {
 
 .mpesa-logo img {
   max-height: 2rem;
+}
+
+.promocode {
+  text-align: center;
+}
+
+.promocode p {
+  font-family: var(--paragraph-font);
 }
 
 .account-info {

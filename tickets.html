@@ -35,6 +35,7 @@
           <h1>950</h1>
         </div>
         <div class="price-info">
+          <p>If you're driving to Karura, this fee is not inclusive of the parking fee.</p>
           <p>Latecomers and no-shows will not be refunded.</p>
           <p>Cancelations less than 48hrs before will not be refunded.</p>
         </div>
@@ -49,6 +50,7 @@
           <h1>1,050</h1>
         </div>
         <div class="price-info">
+          <p>If you're driving to Karura, this fee is not inclusive of the parking fee.</p>
           <p>Latecomers and no-shows will not be refunded.</p>
           <p>Cancelations less than 48hrs before will not be refunded.</p>
         </div>
@@ -63,6 +65,7 @@
           <h1>1,450</h1>
         </div>
         <div class="price-info">
+          <p>If you're driving to Karura, this fee is not inclusive of the parking fee.</p>
           <p>Latecomers and no-shows will not be refunded.</p>
           <p>Cancelations less than 48hrs before will not be refunded.</p>
         </div>
@@ -72,7 +75,8 @@
       </div>
     </div>
     <div class="pricing-info">
-      <p>Parking is charged separately at Ksh.200 per car/Ksh.400 per minivan. Payment at the gate is cashless (strictly
+      <p id="bold">Parking is charged separately at Ksh.200 per car/Ksh.400 per minivan. Payment at the gate is
+        cashless (strictly
         MPESA or Credit/Visa Debit Cards).
       </p>
       <p>Please remember that Karura Forest is Plastic Free (i.e. single-use plastic is not allowed including pet soda
@@ -83,8 +87,7 @@
   <div class="form">
     <h1 class="header">Book your slot now</h1>
     <div class="form-box">
-      <form action="/success/" id='form' method='post' name='Cinema-in-Nature' value='Cinema in Nature Experience'>
-        <input type='hidden' name='form-name' value='Audio-film-series' />
+      <form action="/success/" id='form' method='post' name='Cinema-In-Nature' data-netlify="true">
         <div class="input">
           <label for="fname">First Name</label>
           <input name="First Name" required type="text" id="fname" placeholder="First Name">
@@ -105,42 +108,30 @@
         <div class="more-people">
           <p>+ Add person</p>
         </div>
-        <!-- <div class="payment-info">
-          <p>Cinema in Nature = 500/-</p>
-          <p>Listen & Paint = 200/-</p>
-          <p>Karura entrance fee + Picnic fee = 250/-</p>
-          <p id="total">Total 950/-</p>
-        </div> -->
         <div class="input mpesa">
-          <label for="org">Mpesa Confirmation Code (Paybill: 5242257)</label>
-          <input name="Organization" required type="text" id="org" placeholder="Mpesa Confirmation Code">
+          <label for="reference">Mpesa Confirmation Code</label>
+          <input name="Organization" required type="text" id="reference" placeholder="Mpesa Confirmation Code">
         </div>
         <div class="input mpesa">
-          <label for="listen">Have you listened to our first episode before?</label>
-          <select required name="listened_to_our_episode" id="listen">
-            <option selected disabled value="">----</option>
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-          </select>
+          <label for="ref">Reference Code</label>
+          <input type="text" name="reference-code" id="ref" placeholder="Reference Code">
         </div>
-        <!-- <div class="note info">
-          <p>Sunday 3pm is a crowd favourite! Join the group?</p>
-        </div> -->
         <div class="input">
           <label for="day">Pick The Day</label>
           <select required name="day" id="day">
             <option selected value="">---</option>
-            <option value="Saturday 20">Saturday 27th</option>
-            <!-- <option value="Saturday 27">Saturday 27th</option> -->
+            <option value="Saturday 17">Saturday 17th</option>
+            <option value="Sunday 18">Sunday 18th</option>
           </select>
         </div>
         <div class="input">
           <label for="time">Pick Time Slot</label>
           <select required name="time-slot" id="time">
             <option disabled selected value="">---</option>
-            <option disabled value="10:30 am">8:30 am (Sold Out)</option>
-            <option value="10:30 am">10:30 am</option>
-            <option value="2:00 pm">2:00 pm</option>
+            <option value="9:00am">9:00 am</option>
+            <option value="11:00 am">11:00 am</option>
+            <option value="1:00 pm">1:00 pm</option>
+            <option value="3:00 pm">3:00 pm</option>
           </select>
         </div>
         <div class="note">
@@ -176,6 +167,10 @@
               <p>(Your Name)</p>
             </div>
           </div>
+          <!-- <div class="promocode">
+            <p>Use Reference code</p>
+            <h4>ELVIS SHILAHO</h4>
+          </div> -->
           <div class="order-text">
             <p>Includes: Cinema in Nature + Picnic and Paint Experience</p>
           </div>
@@ -190,5 +185,9 @@
   </div>
 </body>
 <script src="tickets.js"></script>
+<script async id="netlify-rum-container" src="https://netlify-rum.netlify.app/netlify-rum.js"
+  data-netlify-rum-site-id="d2c5229b-797a-4bf7-89d6-98e9f0992750" data-netlify-deploy-branch=""
+  data-netlify-deploy-context="production"
+  data-netlify-cwv-token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaXRlX2lkIjoiZDJjNTIyOWItNzk3YS00YmY3LTg5ZDYtOThlOWYwOTkyNzUwIiwiYWNjb3VudF9pZCI6IjYxNDA0MTAyZDE2ODRmNzE3MDBjMzBiOCIsImRlcGxveV9pZCI6IjY0Nzg2YjhiOGZiNjg1NWYzY2VkMGNlMCIsImlzc3VlciI6Im5mc2VydmVyIn0.tA8NM_FqwIuUNbdEMzHVPqsMIMa0BdYccmKOJ3Shols"></script>
 
 </html>
