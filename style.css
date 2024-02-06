@@ -428,18 +428,14 @@ header {
 }
 
 .cinema-image {
+  background-image: url("./Images/Poetry.png");
+  background-size: cover;
+  background-position: top;
+  min-height: 40rem;
+  max-height: 40rem;
   border-radius: 0.3rem;
   overflow: hidden;
   box-shadow: 0 0 10px -7px black;
-}
-
-.cinema-image {
-  background-image: url("./Images/Poetry.png");
-  background-size: cover;
-  background-position: top center;
-  min-height: 41rem;
-  max-height: 41rem;
-  border-radius: 0.3rem;
 }
 
 .hero {
