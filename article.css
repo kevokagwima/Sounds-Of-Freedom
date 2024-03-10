@@ -52,6 +52,10 @@ a {
   padding: 0;
 }
 
+.overlay {
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
 #back {
   color: var(--highlight-bgcolor);
   font-family: var(--header-font);
