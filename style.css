@@ -447,6 +447,19 @@ header {
   box-shadow: 0 0 10px -7px black;
 }
 
+.instagram {
+  background-color: var(--main-bgcolor);
+  padding: 2rem;
+  grid-column: 1/3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.reels blockquote {
+  height: 100%;
+}
+
 .hero {
   min-height: 90svh;
   padding: 5rem 8rem;
