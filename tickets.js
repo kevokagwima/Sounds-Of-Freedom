@@ -80,3 +80,22 @@ more_btn.addEventListener("click", () => {
     usersDiv.innerHTML = users;
   }
 });
+
+let headers = new Headers();
+headers.append("Content-Type", "application/json");
+headers.append("Authorization", "Bearer T1QTFxEjj2QeoVxqnhHG8U4XagHp");
+
+fetch("https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate", {
+  method: "POST",
+  headers,
+  body: JSON.stringify({
+    ShortCode: 174379,
+    CommandID: "CustomerPayBillOnline",
+    amount: "1",
+    MSISDN: "254796897011",
+    BillRefNumber: "Test",
+  }),
+})
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log(error));
