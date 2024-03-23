@@ -118,24 +118,53 @@ a {
   gap: 1rem;
 }
 
-.price-box {
-  margin-top: 2rem;
-  text-align: center;
-  display: flex;
+.prices {
+  display: grid;
   gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.price-stats {
+  text-align: center;
+  font-family: var(--paragraph-font);
+}
+
+.price-box {
+  text-align: center;
   justify-content: center;
 }
 
 .price-box p {
-  transform: translateY(0.5rem);
-  font-size: 2.2ch;
   font-family: var(--paragraph-font);
 }
 
-.price-box h1 {
-  font-size: 10ch;
+.price-box h1,
+.price-stats h1 {
   font-family: var(--links-font);
   font-weight: bold;
+}
+
+hr {
+  grid-column: 1/3;
+  margin: 0.5rem 0;
+}
+
+.price-total {
+  grid-column: 1/3;
+  text-align: center;
+  font-family: var(--paragraph-font);
+}
+
+.price-total h1 {
+  font-size: 5ch;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.price-total h1 > span {
+  font-size: 0.5ch;
 }
 
 .price-info {
@@ -235,6 +264,11 @@ a {
 }
 
 .order-users {
+  font-family: var(--paragraph-font);
+}
+
+#info {
+  text-align: center;
   font-family: var(--paragraph-font);
 }
 
@@ -462,6 +496,10 @@ form button {
   .form-box {
     max-width: 80%;
   }
+
+  .pricing-box {
+    padding-inline: 0;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -538,9 +576,27 @@ form button {
     width: 100%;
   }
 
+  .pricing {
+    padding-inline: 1rem;
+  }
+
   .pricing > h1,
   .columns > h1 {
     font-size: 2.2ch;
+  }
+
+  .price-stats p {
+    font-size: 1.2ch;
+  }
+  .price-box p {
+    font-size: 1.6ch;
+  }
+
+  .price-box h1 {
+    font-size: 2ch;
+  }
+  .price-stats h1 {
+    font-size: 1.5ch;
   }
 
   .price-info p {

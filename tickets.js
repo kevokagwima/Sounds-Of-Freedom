@@ -34,7 +34,7 @@ const total_amount = document.querySelector("#total-amount");
 showButton[0].addEventListener("click", () => {
   pricing.classList.add("hide-pricing");
   showForm.classList.add("show-form");
-  total_amount.innerHTML = citizen;
+  total_amount.innerHTML = citizen + 100;
   users = users;
   localStorage.setItem("pricing", "citizen");
 });
@@ -42,7 +42,7 @@ showButton[0].addEventListener("click", () => {
 showButton[1].addEventListener("click", () => {
   pricing.classList.add("hide-pricing");
   showForm.classList.add("show-form");
-  total_amount.innerHTML = resident;
+  total_amount.innerHTML = resident + 100;
   users = users;
   localStorage.setItem("pricing", "resident");
 });
@@ -50,7 +50,7 @@ showButton[1].addEventListener("click", () => {
 showButton[2].addEventListener("click", () => {
   pricing.classList.add("hide-pricing");
   showForm.classList.add("show-form");
-  total_amount.innerHTML = non_resident;
+  total_amount.innerHTML = non_resident + 100;
   users = users;
   localStorage.setItem("pricing", "non-resident");
 });
@@ -60,21 +60,21 @@ more_btn.addEventListener("click", () => {
   var pricing = localStorage.getItem("pricing");
   if (pricing == "citizen") {
     let final;
-    final = parseInt(total_amount.innerHTML) + citizen;
+    final = parseInt(total_amount.innerHTML) + citizen + 100;
     users = parseInt(usersDiv.innerHTML) + 1;
     total_amount.innerHTML = final;
     usersDiv.innerHTML = users;
   }
   if (pricing == "resident") {
     let final;
-    final = parseInt(total_amount.innerHTML) + resident;
+    final = parseInt(total_amount.innerHTML) + resident + 100;
     users = parseInt(usersDiv.innerHTML) + 1;
     total_amount.innerHTML = final;
     usersDiv.innerHTML = users;
   }
   if (pricing == "non-resident") {
     let final;
-    final = parseInt(total_amount.innerHTML) + non_resident;
+    final = parseInt(total_amount.innerHTML) + non_resident + 100;
     users = parseInt(usersDiv.innerHTML) + 1;
     total_amount.innerHTML = final;
     usersDiv.innerHTML = users;
