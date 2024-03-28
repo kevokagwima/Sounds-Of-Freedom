@@ -4,9 +4,9 @@
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SB486H419R"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    window.dataLayer = window.dataLayer || []
+    function gtag() { dataLayer.push(arguments) }
+    gtag('js', new Date())
 
     gtag('config', 'G-SB486H419R');
   </script>
@@ -163,7 +163,7 @@
         </div>
         <div class="input">
           <label for="day">Pick The Day</label>
-          <select required name="day" id="day">
+          <select required name="day" id="day" onchange="updateTimeOptions()">
             <option selected value="">---</option>
             <option value="Friday 29">Friday 29th</option>
             <option value="Saturday 30">Saturday 30th</option>
@@ -173,9 +173,6 @@
         <div class="input">
           <label for="time">Pick Time Slot</label>
           <select required name="time-slot" id="time">
-            <option disabled selected value="">---</option>
-            <option value="10:30 am">10:30 am</option>
-            <option value="2:00 pm">2:00 pm</option>
           </select>
         </div>
         <div class="note">

@@ -81,21 +81,31 @@ more_btn.addEventListener("click", () => {
   }
 });
 
-let headers = new Headers();
-headers.append("Content-Type", "application/json");
-headers.append("Authorization", "Bearer T1QTFxEjj2QeoVxqnhHG8U4XagHp");
+function updateTimeOptions() {
+  var dateSelect = document.getElementById("day");
+  var timeSelect = document.getElementById("time");
+  var selectedDate = dateSelect.value;
 
-fetch("https://sandbox.safaricom.co.ke/mpesa/c2b/v1/simulate", {
-  method: "POST",
-  headers,
-  body: JSON.stringify({
-    ShortCode: 174379,
-    CommandID: "CustomerPayBillOnline",
-    amount: "1",
-    MSISDN: "254796897011",
-    BillRefNumber: "Test",
-  }),
-})
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+  timeSelect.innerHTML = "";
+
+  if (selectedDate === "Friday 29") {
+    addTimeOption("10:30", "10:30 AM", false);
+    addTimeOption("2:00", "2:00 PM", false);
+  } else if (selectedDate === "Saturday 30") {
+    addTimeOption("10:30", "10:30 AM (Sold Out)", true);
+    addTimeOption("2:00", "02:00 PM", false);
+  } else if (selectedDate === "Sunday 31") {
+    addTimeOption("10:30", "10:30 AM", false);
+    addTimeOption("2:00", "02:00 PM", false);
+  }
+
+  function addTimeOption(value, label, disabled) {
+    var option = document.createElement("option");
+    option.value = value;
+    if (disabled) {
+      option.disabled = true;
+    }
+    option.textContent = label;
+    timeSelect.appendChild(option);
+  }
+}
