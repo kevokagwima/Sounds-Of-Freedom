@@ -88,13 +88,10 @@ function updateTimeOptions() {
 
   timeSelect.innerHTML = "";
 
-  if (selectedDate === "Friday 29") {
+  if (selectedDate === "Saturday 6") {
     addTimeOption("10:30", "10:30 AM", false);
     addTimeOption("2:00", "2:00 PM", false);
-  } else if (selectedDate === "Saturday 30") {
-    addTimeOption("10:30", "10:30 AM (Sold Out)", true);
-    addTimeOption("2:00", "02:00 PM", false);
-  } else if (selectedDate === "Sunday 31") {
+  } else if (selectedDate === "Sunday 7") {
     addTimeOption("10:30", "10:30 AM", false);
     addTimeOption("2:00", "02:00 PM", false);
   }
