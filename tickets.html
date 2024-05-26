@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <a href="index.html" id="back">Home</a>
+  <a target="_blank" href="https://paydexp.com/cinema-in-nature-0" id="back">Buy Tickets</a>
   <section class="pricing">
     <h1>Explore the Magic of Nature Cinema in Karura Forest!</h1>
     <div class="pricing-box">
@@ -165,7 +165,8 @@
           <label for="day">Pick The Day</label>
           <select required name="day" id="day" onchange="updateTimeOptions()">
             <option selected value="">---</option>
-            <option value="Saturday 6">Saturday 6th</option>
+            <option value="Saturday 18">Saturday 25th</option>
+            <!-- <option value="Sunday 21">Sunday 21st</option> -->
           </select>
         </div>
         <div class="input">
@@ -206,10 +207,9 @@
               <p>(Your Name)</p>
             </div>
           </div>
-          <!-- <div class="promocode">
-            <p>Use Reference code</p>
-            <h4>ELVIS SHILAHO</h4>
-          </div> -->
+          <div class="pay-now">
+            <button id="pay-now">Pay Now</button>
+          </div>
           <div class="order-text">
             <p>Includes: Cinema in Nature + Picnic and Paint Experience</p>
           </div>
@@ -224,6 +224,7 @@
   </div>
 </body>
 <script src="tickets.js"></script>
+<script src="mpesa.js"></script>
 <script async id="netlify-rum-container" src="https://netlify-rum.netlify.app/netlify-rum.js"
   data-netlify-rum-site-id="d2c5229b-797a-4bf7-89d6-98e9f0992750" data-netlify-deploy-branch=""
   data-netlify-deploy-context="production"

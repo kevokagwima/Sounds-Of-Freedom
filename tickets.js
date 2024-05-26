@@ -88,10 +88,14 @@ function updateTimeOptions() {
 
   timeSelect.innerHTML = "";
 
-  if (selectedDate === "Saturday 6") {
+  if (selectedDate === "Saturday 18") {
     addTimeOption("10:30", "10:30 AM", false);
     addTimeOption("2:00", "2:00 PM", false);
   }
+  // else if (selectedDate === "Sunday 21") {
+  //   addTimeOption("10:30", "10:30 AM", false);
+  //   addTimeOption("2:00", "2:00 PM", false);
+  // }
 
   function addTimeOption(value, label, disabled) {
     var option = document.createElement("option");

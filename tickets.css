@@ -43,6 +43,10 @@ input::-webkit-inner-spin-button {
 body {
   background-color: var(--highlight-bgcolor);
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
 }
 
 a {
@@ -53,11 +57,11 @@ a {
   color: var(--highlight-bgcolor);
   font-family: var(--header-font);
   background-color: var(--main-bgcolor);
-  padding: 0.2rem 0.5rem;
+  padding: 1rem;
   border-radius: 0.3rem;
-  font-size: 2ch;
-  position: absolute;
-  inset: 2rem auto auto 5rem;
+  font-size: 2.5ch;
+  /* position: absolute;
+  inset: 2rem auto auto 5rem; */
 }
 
 .pricing {
