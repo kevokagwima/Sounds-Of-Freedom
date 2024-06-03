@@ -436,8 +436,12 @@ header {
   font-size: 2.2ch;
 }
 
+.cinema-image img {
+  height: 40rem;
+}
+
 .cinema-image {
-  background-image: url("./Images/Poetry.png");
+  background-image: url("./Images/Flyer\ Twende\ Karura.webp");
   background-size: cover;
   background-position: top;
   min-height: 40rem;
