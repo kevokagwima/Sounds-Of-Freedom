@@ -360,11 +360,16 @@ header {
 
 .cinema {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-  align-items: center;
+  gap: 2rem;
   background-color: #212121;
   color: var(--main-bgcolor);
+}
+
+.cinema-info-box {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
 }
 
 .cinema-info {
@@ -452,16 +457,23 @@ header {
 }
 
 .instagram {
-  background-color: var(--main-bgcolor);
-  padding: 2rem;
-  grid-column: 1/3;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin-top: 4rem;
 }
 
-.reels blockquote {
-  height: 100%;
+.reels {
+  position: relative;
+  min-height: 30rem;
+  outline: 4px solid var(--highlight-bgcolor);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.reels video {
+  min-height: 100%;
+  max-height: 30rem;
 }
 
 .hero {
@@ -957,6 +969,7 @@ video {
 
 video[poster] {
   object-fit: cover;
+  width: 100%;
 }
 
 .grid-image:nth-child(3) {
@@ -1963,11 +1976,6 @@ video[poster] {
     background-position: left;
   }
 
-  .cinema {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .audio-box {
     padding-block: 0;
   }
@@ -2096,6 +2104,32 @@ video[poster] {
 
   .audio-box {
     padding-block: 2rem;
+  }
+
+  .cinema-info-box {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .cinema-info h1 {
+    font-size: 3ch;
+  }
+
+  .cinema-image {
+    min-height: 30rem;
+  }
+
+  .instagram {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+
+  .reels {
+    min-height: 25rem;
+  }
+
+  .reels video {
+    max-height: 25rem;
   }
 
   .hero {
@@ -2556,8 +2590,20 @@ video[poster] {
   }
 
   .cinema-image {
-    min-height: 30rem;
-    max-height: 30rem;
+    min-height: 20rem;
+    max-height: 20rem;
+  }
+
+  .instagram {
+    grid-template-columns: 1fr;
+  }
+
+  .reels {
+    min-height: 20rem;
+  }
+
+  .reels video {
+    max-height: 20rem;
   }
 
   .hero-info h1 {

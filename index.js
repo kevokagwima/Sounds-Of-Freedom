@@ -35,10 +35,10 @@ gallery.addEventListener("mouseover", () => {
 const ctrlVideo = document.querySelectorAll("#video");
 const button = document.querySelectorAll(".play-btn");
 
-window.onload = () => {
-  // ctrlVideo[0].play();
-  button[0].classList.toggle("active");
-};
+// window.onload = () => {
+//   // ctrlVideo[0].play();
+//   button[0].classList.toggle("active");
+// };
 
 button.forEach((btn) => {
   btn.addEventListener("click", () => {
