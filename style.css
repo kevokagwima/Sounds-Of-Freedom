@@ -456,26 +456,6 @@ header {
   box-shadow: 0 0 10px -7px black;
 }
 
-.instagram {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 4rem;
-}
-
-.reels {
-  position: relative;
-  min-height: 30rem;
-  outline: 4px solid var(--highlight-bgcolor);
-  border-radius: 0.3rem;
-  overflow: hidden;
-}
-
-.reels video {
-  min-height: 100%;
-  max-height: 30rem;
-}
-
 .hero {
   min-height: 90svh;
   padding: 5rem 8rem;
@@ -692,6 +672,10 @@ header {
 .overlay {
   padding: 4rem;
   background-color: rgb(0, 0, 0, 0.4);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  align-items: center;
 }
 
 #prev {
@@ -700,22 +684,44 @@ header {
 }
 
 .audio-box {
+  /* outline: 1px solid red; */
   color: var(--main-bgcolor);
+  display: grid;
+  gap: 1rem;
 }
 
 .audio-box h1 {
   font-family: var(--header-font);
   font-size: 6ch;
   color: var(--highlight-bgcolor);
-  max-width: 60%;
+  /* max-width: 60%; */
 }
 
 .audio-box p {
   font-size: 2.2ch;
   line-height: 1.5;
-  max-width: 55%;
-  margin-top: 2rem;
+  /* max-width: 55%; */
+  /* margin-top: 2rem; */
   font-weight: bold;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+}
+
+.reel {
+  position: relative;
+  min-height: 30rem;
+  outline: 2px solid var(--highlight-bgcolor);
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.reel video {
+  min-height: 100%;
+  max-height: 30rem;
+  width: 30rem;
 }
 
 #text {
@@ -1742,9 +1748,8 @@ video[poster] {
     left: 5rem;
   }
 
-  .audio-box h1,
-  .audio-box p {
-    max-width: 80%;
+  .audio-box h1 {
+    font-size: 5ch;
   }
 
   .hero-info h1 {
@@ -1980,6 +1985,10 @@ video[poster] {
     padding-block: 0;
   }
 
+  .audio-box p {
+    font-size: 2ch;
+  }
+
   .hero-info h1 {
     font-size: 14ch;
     max-width: 90%;
@@ -2103,12 +2112,25 @@ video[poster] {
   }
 
   .audio-box {
-    padding-block: 2rem;
+    padding-block: 0;
   }
 
-  .cinema-info-box {
+  .audio-box h1 {
+    font-size: 5ch;
+  }
+
+  .audio-box p {
+    font-size: 2.5ch;
+  }
+
+  .cinema-info-box,
+  .overlay {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .overlay {
+    gap: 1rem;
   }
 
   .cinema-info h1 {

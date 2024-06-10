@@ -185,6 +185,58 @@ a {
   font-size: 2.2ch;
 }
 
+.instagram {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.reels {
+  position: relative;
+  height: max-content;
+}
+
+.reel {
+  border-radius: 0.3rem;
+  overflow: hidden;
+  outline: 2px solid var(--highlight-bgcolor);
+}
+
+.reel video {
+  height: 100%;
+  max-height: 40rem;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  background-color: var(--highlight-bgcolor);
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  margin: auto auto;
+  display: grid;
+  place-items: center;
+}
+
+.play-btn img {
+  height: 2.5rem;
+  transform: translateX(0.2rem);
+}
+
+.active {
+  z-index: -1;
+}
+
+video[poster] {
+  object-fit: cover;
+  width: 100%;
+}
+
 .event-info {
   padding: 4rem 18rem;
   background-color: var(--highlight-bgcolor);
@@ -364,6 +416,19 @@ a {
     font-size: 3ch;
   }
 
+  .instagram {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+  }
+
+  .reels {
+    min-height: 25rem;
+  }
+
+  .reels video {
+    max-height: 25rem;
+  }
+
   .audio-text p {
     font-size: 2ch;
   }
@@ -416,6 +481,23 @@ a {
   .makena-info p {
     max-width: 100rem;
     font-size: 1.8ch;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .instagram {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  .reels {
+    width: max-content;
+    min-height: 20rem;
+  }
+
+  .reels video {
+    height: 100%;
+    max-height: 25rem;
   }
 }
 
