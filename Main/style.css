@@ -1,0 +1,3350 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+}
+
+:root {
+  --main-bgcolor: white;
+  --sec-bgcolor: whitesmoke;
+  --highlight-bgcolor: #ff6900;
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--main-bgcolor);
+  max-width: 0.5rem;
+  max-height: 0.3rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+}
+
+body {
+  background-color: var(--main-bgcolor);
+  overflow-x: hidden;
+}
+
+section {
+  overflow: hidden;
+  padding: 4rem 8rem;
+  background-color: var(--main-bgcolor);
+}
+
+h1 {
+  font-family: var(--header-font);
+  font-size: 5ch;
+}
+
+p {
+  font-family: var(--paragraph-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-bgcolor);
+}
+
+header {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  min-width: 100vw;
+  top: 0;
+  background-color: white;
+  z-index: 10;
+}
+
+.active-header {
+  box-shadow: 0 0 10px -8px black;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#gallery,
+.gallery {
+  position: relative;
+}
+
+.gallery {
+  cursor: pointer;
+}
+
+.cinema-drop-down {
+  position: absolute;
+  background-color: var(--main-bgcolor);
+  top: 4rem;
+  left: 0;
+  right: 0;
+  display: grid;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(2rem);
+}
+
+.show-cinema {
+  transition: 250ms ease-in-out;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.cinema-drop-down a {
+  font-family: var(--paragraph-font);
+  color: black;
+}
+
+.cinema-drop-down a:hover {
+  color: var(--highlight-bgcolor);
+}
+
+#new {
+  position: absolute;
+  top: -0.9rem;
+  right: -1rem;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  border-radius: 30rem;
+  font-family: var(--paragraph-font);
+  font-size: 0.8ch;
+  padding: 0.2rem 0.3rem;
+}
+
+#link {
+  color: #212121;
+  font-family: var(--links-font);
+}
+
+#link:hover {
+  color: var(--highlight-bgcolor);
+  font-weight: 700;
+}
+
+#logo img {
+  max-height: 3rem;
+}
+
+.n-fest {
+  position: relative;
+}
+
+.n-fest p {
+  cursor: pointer;
+}
+
+.n-fest:hover .n-fest-links {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.n-fest-links {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: var(--main-bgcolor);
+  display: grid;
+  gap: 1rem;
+  position: absolute;
+  top: 2.5rem;
+  min-width: max(10rem, 100%);
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: 0.3s ease-in;
+  box-shadow: 0 0 10px -8px rgb(0, 0, 0);
+}
+
+.n-fest-links a {
+  font-family: var(--paragraph-font);
+}
+
+.subscribe {
+  background-color: var(--highlight-bgcolor);
+  padding: 0.2rem 1rem;
+  border-radius: 30rem;
+  color: white;
+  font-family: var(--header-font);
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  cursor: pointer;
+  display: none;
+}
+
+.div {
+  background-color: #212121;
+  width: 1.5rem;
+  min-height: 0.1rem;
+  border-radius: 0.3rem;
+}
+
+.div:nth-child(2) {
+  width: 1.3rem;
+}
+
+.div:nth-child(3) {
+  width: 1rem;
+}
+
+.side-nav {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  background-color: var(--main-bgcolor);
+  z-index: 10;
+  top: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  translate: 100%;
+  transition: 0.4s ease-in-out;
+  opacity: 0;
+}
+
+.show-side-nav {
+  translate: 0;
+  opacity: 1;
+}
+
+#close {
+  font-size: 3rem;
+  cursor: pointer;
+  color: red;
+  max-width: max-content;
+  margin-left: 90%;
+}
+
+.side-nav #link {
+  padding: 1rem;
+  border-radius: 0.2rem;
+  font-size: 3ch;
+  color: var(--highlight-bgcolor);
+  text-align: center;
+}
+
+.festival-banner {
+  background-color: rgb(0, 0, 0);
+}
+
+.festival-boxs {
+  min-height: 35rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.fest-info {
+  display: grid;
+  gap: 0.6rem;
+  color: var(--main-bgcolor);
+}
+
+.fest-info h1 {
+  font-size: 6ch;
+}
+
+.fest-info h4 {
+  font-family: var(--header-font);
+  font-size: 3ch;
+}
+
+.fest-info p {
+  line-height: 1.6;
+}
+
+.fest-image {
+  position: relative;
+}
+
+.fest-image video {
+  max-height: 25rem;
+}
+
+.fest-btns {
+  margin-top: 1.5rem;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.actions p {
+  color: var(--highlight-bgcolor);
+  font-size: 2.2ch;
+}
+
+.fest-btns button {
+  border: none;
+  padding: 0.7em 1em;
+  font-family: var(--links-font);
+  border-radius: 0.3rem;
+  font-size: 2.2ch;
+  cursor: pointer;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+}
+
+.patriots {
+  min-height: 30rem;
+  background-image: url(./Images/patriots-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.patriots-info {
+  display: grid;
+  gap: 1.5rem;
+  text-align: center;
+  color: whitesmoke;
+  max-width: 60%;
+}
+
+.patriots-info h1 {
+  color: var(--main-bgcolor);
+  font-size: 6ch;
+}
+
+.patriots-info p {
+  font-size: 2.5ch;
+  line-height: 1.5;
+}
+
+#patriots {
+  background-color: var(--highlight-bgcolor);
+  padding: 1em 2em;
+  font-family: var(--header-font);
+  color: var(--main-bgcolor);
+  max-width: max-content;
+  margin: 2rem auto 0;
+  border-radius: 30rem;
+  cursor: pointer;
+}
+
+.video {
+  max-height: 1rem;
+}
+
+.cinema {
+  display: grid;
+  gap: 2rem;
+  background-color: #212121;
+  color: var(--main-bgcolor);
+  max-width: 100%;
+}
+
+.cinema-info-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 5rem;
+}
+
+.cinema-info {
+  display: grid;
+  gap: 1rem;
+}
+
+.cinema-info p {
+  font-size: 2.2ch;
+  color: whitesmoke;
+}
+
+.cinema-info span {
+  font-weight: bold;
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+}
+
+#distance {
+  color: var(--main-bgcolor);
+  font-family: var(--paragraph-font);
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.2ch;
+}
+
+.cinema-price {
+  margin-top: 1rem;
+}
+
+.cinema-price ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cinema-price ul li {
+  font-family: var(--paragraph-font);
+  padding: 0.5em;
+  border-radius: 0.3rem;
+  outline: 2px solid var(--main-bgcolor);
+  background-color: var(--main-bgcolor);
+  color: #212121;
+  font-weight: bold;
+}
+
+#total {
+  margin-bottom: 1rem;
+  font-size: 3ch;
+  color: greenyellow;
+}
+
+.cinema-btn {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.cinema-btn button {
+  border: none;
+  border-radius: 0.3rem;
+  padding: 1em;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  cursor: pointer;
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+}
+
+.cinema-image-box {
+  position: relative;
+  display: grid;
+  width: 100%;
+}
+
+.cinema-image-box > .button {
+  border: none;
+  outline: 3px solid var(--main-bgcolor);
+  position: absolute;
+  inset: 0 auto 0 auto;
+  top: 50%;
+  max-height: max-content;
+  height: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  font-size: 4ch;
+  padding: 0.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#left {
+  left: 0;
+}
+
+#right {
+  right: 0;
+}
+
+.cinema-image > img {
+  border-radius: 0.3rem;
+  width: 90%;
+  box-shadow: 0 0 10px -7px black;
+  margin-inline: auto;
+}
+
+.reel {
+  min-height: 40rem;
+  position: relative;
+  outline: 2px solid var(--highlight-bgcolor);
+  border-radius: 0.3rem;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.reel video {
+  min-height: 100%;
+  max-height: 30rem;
+  width: 30rem;
+}
+
+.cinema-experience {
+  padding-top: 2rem;
+  overflow-x: hidden;
+}
+
+.cinema-experience > h1 {
+  text-align: center;
+}
+
+.experience-box {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  overflow-x: scroll;
+  max-width: 79rem;
+}
+
+.experience-box::-webkit-scrollbar {
+  background-color: #212121;
+}
+
+.experience-box img {
+  max-height: 20rem;
+  border-radius: 0.3rem;
+}
+
+.hero {
+  min-height: 90svh;
+  padding: 5rem 8rem;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+  position: relative;
+  background-image: url("./Images/BANNER\ USIU\ FRANCE\ SOF.png");
+  background-size: 100% 120%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-position: top;
+  /* background-color: var(--main-bgcolor); */
+  display: none;
+}
+
+.subscribe-btn {
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  padding: 0.8rem 1rem;
+  border-radius: 30rem;
+  font-family: var(--header-font);
+  cursor: pointer;
+  max-width: max-content;
+}
+
+.hero-info {
+  width: max-content;
+  z-index: 10;
+}
+
+.hero-info > h1 {
+  color: #212121;
+  font-size: 10ch;
+  text-transform: uppercase;
+}
+
+#freedom {
+  color: var(--highlight-bgcolor);
+}
+
+.hero-info p {
+  font-family: var(--special-font);
+  font-size: 3rem;
+  color: var(--highlight-bgcolor);
+}
+
+.about-info > h4,
+.hero-info > h4 {
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+  color: var(--main-bgcolor);
+}
+
+.hero-info > h4 {
+  color: black;
+  font-size: 5ch;
+  margin-top: 9rem;
+}
+
+.about-info h4 > span {
+  letter-spacing: 1px;
+}
+
+.hero #btn {
+  padding: 1em;
+  border: none;
+  font-size: 2.2ch;
+  color: var(--main-bgcolor);
+  background-color: var(--highlight-bgcolor);
+  border-radius: 30rem;
+  font-family: var(--paragraph-font);
+  cursor: pointer;
+}
+
+.hero-image {
+  position: absolute;
+  right: 5rem;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero-image img {
+  max-height: 30rem;
+  transform: rotatey(180deg);
+}
+
+.scroll-down {
+  position: absolute;
+  inset: auto 50% 2rem auto;
+  animation: float 1s forwards infinite ease-in-out;
+}
+
+.scroll-down img {
+  max-height: 1.5rem;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(1rem);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(1rem);
+  }
+}
+
+.about {
+  background-color: var(--highlight-bgcolor);
+  padding: 4rem 8rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10rem;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about h1 {
+  color: var(--main-bgcolor);
+}
+
+.about-info {
+  font-size: 2.5ch;
+  color: var(--main-bgcolor);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.6;
+}
+
+.image {
+  background-color: var(--highlight-bgcolor);
+  background-image: url(./images/Picture.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  outline: 4px solid var(--main-bgcolor);
+  border-radius: 0.3rem;
+}
+
+.upcoming-event > h1 {
+  max-width: 40rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upcoming-event > h4 {
+  text-align: center;
+  font-family: var(--paragraph-font);
+  font-size: 3ch;
+  max-width: 60vw;
+  margin: 2rem auto 0;
+  font-weight: lighter;
+}
+
+.event-box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 2rem;
+  margin: 3rem auto 0;
+  max-width: 40rem;
+}
+
+.event-box div h4 {
+  font-family: var(--special-font);
+  font-size: 3ch;
+  font-weight: lighter;
+}
+
+.date,
+.venue {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  color: black;
+  background-color: var(--main-bgcolor);
+  box-shadow: 1px 1px 5rem -2rem rgba(0, 0, 0, 0.488);
+}
+
+.event-box div p {
+  margin-top: 0.5rem;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+}
+
+.event-link {
+  grid-column: 1/3;
+  background-color: var(--highlight-bgcolor);
+  padding: 1rem;
+  margin: 2rem auto 0;
+  border-radius: 30rem;
+  text-align: center;
+}
+
+.event-link a {
+  color: white;
+  font-family: var(--header-font);
+  font-size: 2ch;
+}
+
+.audio-film {
+  padding: 0;
+  background-image: url("./Images/forest.avif");
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  padding: 4rem;
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+#prev {
+  text-align: center;
+  color: var(--highlight-bgcolor);
+}
+
+.audio-box {
+  color: var(--main-bgcolor);
+  display: grid;
+  gap: 1rem;
+}
+
+.audio-box h1 {
+  font-family: var(--header-font);
+  font-size: 6ch;
+  color: var(--highlight-bgcolor);
+  max-width: 50%;
+}
+
+.audio-box p {
+  font-size: 2.2ch;
+  line-height: 1.5;
+  font-weight: bold;
+  color: var(--main-bgcolor);
+  max-width: 50%;
+}
+
+.scroll {
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-btn {
+  height: 3rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--highlight-bgcolor);
+  display: grid;
+  place-items: center;
+}
+
+.scroll a i {
+  border: none;
+  background-color: transparent;
+  font-size: 3ch;
+  font-weight: bolder;
+  color: var(--main-bgcolor);
+}
+
+#text {
+  font-family: var(--header-font);
+  font-size: 4ch;
+  margin-top: 2rem;
+}
+
+.account-info {
+  grid-column: 1/3;
+  border-top: 1px solid var(--main-bgcolor);
+}
+
+.audio-btn {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.audio-btn a {
+  padding: 1em 2em;
+  border-radius: 30rem;
+  color: var(--main-bgcolor);
+  background-color: var(--highlight-bgcolor);
+  font-family: var(--header-font);
+  font-size: 2.2ch;
+}
+
+.afrika-box {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.afrika-box img {
+  height: 15rem;
+}
+
+.afrika-text p {
+  max-width: 40vw;
+  font-size: 2.5ch;
+  line-height: 1.6;
+}
+
+.afrika-info {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+}
+
+.afrika-info span {
+  font-family: var(--header-font);
+}
+
+.listen {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+#afrika-btn {
+  border: none;
+  font-family: var(--header-font);
+  color: var(--highlight-bgcolor);
+  cursor: pointer;
+  font-size: 2.2ch;
+}
+
+.afrika {
+  background-color: #f9ff00;
+}
+
+.upcoming-event {
+  background-color: white;
+}
+
+hr {
+  border: none;
+  outline: 4px solid var(--highlight-bgcolor);
+  max-width: 11%;
+  margin: 0.3rem 0 1rem;
+}
+
+.premier > hr {
+  margin-bottom: 4rem;
+}
+
+.heroes h4,
+.exhibition h4 {
+  font-family: var(--paragraph-font);
+  font-size: 3ch;
+}
+
+.heroes,
+.exhibition-details,
+.patriot {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.heroes div,
+.exhibition-details div,
+.patriot div {
+  border-radius: 0.3rem;
+}
+
+.heroes-info,
+.exhibition-info,
+.patriot-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  gap: 1rem;
+  max-height: max-content;
+  grid-column: 1/4;
+}
+
+.heroes p,
+.heroes-exp p,
+.exhibition-info p,
+.patriot p,
+.festival-box p {
+  line-height: 1.6;
+  font-size: 2.2ch;
+  font-weight: 500;
+}
+
+.image-grid {
+  grid-column: 4/7;
+  grid-row: 1/2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  overflow: hidden;
+  margin-top: -11.4rem;
+}
+
+.grid-image,
+.exhibition-image,
+.patriot-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.grid-image:first-child {
+  grid-column: 1/3;
+  background-image: url(./Images/FLIP8286.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 20rem;
+  max-height: 20rem;
+}
+
+.grid-image:nth-child(2) {
+  background-image: url(./Images/FLIP8531.jpg);
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/5;
+  min-height: 20rem;
+  max-height: 20rem;
+}
+
+.grid-image,
+.exhibition-image,
+.patriot-image {
+  transition: 250ms ease-in-out;
+}
+
+.grid-image:hover,
+.exhibition-image:hover,
+.patriot-image:hover {
+  transform: scale(1.02);
+}
+
+.exhibition-image:first-child,
+.patriot-image:first-child,
+.grid-image:nth-child(3),
+.grid-image:nth-child(4) {
+  transform: none;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  height: 5rem;
+  aspect-ratio: 1/1;
+  background-color: var(--highlight-bgcolor);
+  border-radius: 50%;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  margin: auto auto;
+  display: grid;
+  place-items: center;
+}
+
+.exhibition-image .play-btn,
+.patriot-image .play-btn {
+  top: 4rem;
+}
+
+.play-btn img {
+  height: 2.5rem;
+  transform: translateX(0.2rem);
+}
+
+.active {
+  z-index: -1;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.3rem;
+  z-index: 2;
+}
+
+video[poster] {
+  object-fit: cover;
+  width: 100%;
+}
+
+.grid-image:nth-child(3) {
+  grid-column: 1/3;
+  grid-row: 2/2;
+  min-height: 15rem;
+  max-height: 15rem;
+}
+
+.grid-image:nth-child(4) {
+  grid-column: 3/5;
+  grid-row: 2/2;
+  min-height: 15rem;
+  max-height: 15rem;
+}
+
+.heroes-exp {
+  grid-column: 4/7;
+  grid-row: 2/4;
+  max-height: 31rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+
+.heroes-exp p,
+.exh-exp p,
+.patriot-exp p {
+  margin-top: 1rem;
+  max-width: 80%;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+#image {
+  min-height: 15rem;
+  background-image: url(./Images/FLIP8394.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  grid-column: 1/4;
+}
+
+#image h4,
+.exhibition-image:nth-child(3) h4,
+.pat-quotes h4 {
+  color: var(--main-bgcolor);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.exhibition-image:nth-child(3) h4,
+.pat-quotes h4 {
+  right: 0;
+  text-align: right;
+}
+
+.heroes-quotes {
+  grid-row: 3/3;
+  grid-column: 1/3;
+}
+
+.heroes-quotes h1,
+.exp-quotes h1,
+.pat-quotes h4 {
+  font-size: 4ch;
+}
+
+.pat-quotes h4,
+.pat-quotes h4 > p {
+  font-family: var(--header-font);
+  text-align: right;
+}
+
+.heroes-quotes h4,
+.exp-quotes h4 {
+  color: grey;
+  margin-top: 0.5rem;
+  font-size: 2ch;
+}
+
+.exhibition {
+  background-color: var(--sec-bgcolor);
+}
+
+.exhibition-info {
+  justify-content: center;
+}
+
+.exhibition-details .image-grid,
+.heroes .image-grid,
+.patriot .image-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.exhibition-image:first-child {
+  min-height: 20rem;
+  max-height: 20rem;
+  grid-column: 1/5;
+  grid-row: 1/1;
+}
+
+.exhibition-image:nth-child(2) {
+  background-image: url(./Images/Picture2.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 12rem;
+  max-height: 12rem;
+  grid-column: 1/3;
+  grid-row: 2/2;
+}
+
+.exhibition-image:nth-child(3) {
+  background-image: url(./Images/Picture7.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 12rem;
+  max-height: 12rem;
+  grid-column: 3/5;
+  grid-row: 2/2;
+  position: relative;
+}
+
+.exh-image,
+.pat-image {
+  grid-column: 1/4;
+  grid-row: 2/4;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+.pat-image {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.exh-image-img:first-child,
+.pat-image-img:first-child {
+  background-image: url(./Images/Picture8.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.pat-image-img:first-child {
+  grid-column: 1/3;
+  grid-row: 1/4;
+  background-image: url(./Images/Picture15.png);
+}
+
+.exh-image-img:nth-child(2),
+.pat-image-img:nth-child(2) {
+  background-image: url(./Images/Picture9.png);
+  background-size: cover;
+  background-position: center;
+  grid-column: 4/7;
+  grid-row: 1/2;
+}
+
+.pat-image-img:nth-child(2) {
+  background-image: url(./Images/Picture16.png);
+  grid-column: 3/5;
+  grid-row: 1/4;
+}
+
+.exh-image-img:nth-child(3),
+.pat-image-img:nth-child(3) {
+  background-image: url(./Images/Picture10.png);
+  background-size: cover;
+  background-position: center;
+  grid-column: 1/3;
+}
+
+.pat-image-img:nth-child(3) {
+  background-image: url(./Images/Picture17.png);
+  grid-column: 1/5;
+  grid-row: 4/7;
+}
+
+.exh-image-img:nth-child(4),
+.pat-quotes {
+  background-image: url(./Images/Picture11.png);
+  background-size: cover;
+  background-position: center;
+  grid-column: 3/7;
+}
+
+.pat-quotes {
+  background-image: none;
+  background-color: var(--main-bgcolor);
+  grid-column: 1/3;
+  grid-row: 6/6;
+  position: relative;
+}
+
+.pat-quotes h4 {
+  color: #212121;
+  font-size: 4ch;
+}
+
+.pat-quotes h4 > p {
+  font-size: 1ch;
+}
+
+.exh-exp,
+.patriot-exp {
+  grid-column: 4/7;
+}
+
+.exp-quotes {
+  grid-column: 4/7;
+}
+
+.patriot-image:first-child {
+  grid-column: 1/5;
+}
+
+.patriot-image:nth-child(2) {
+  background-image: url(./Images/Picture13.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 15rem;
+  max-height: 15rem;
+  grid-column: 1/3;
+}
+
+.patriot-image:nth-child(3) {
+  background-image: url(./Images/Picture14.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 15rem;
+  max-height: 15rem;
+  grid-column: 3/5;
+}
+
+.linkedin {
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+}
+
+.linkedin h1 {
+  text-align: center;
+}
+
+.linkedin-info {
+  padding: 2rem;
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.linkedin-info p {
+  line-height: 1.5;
+}
+
+.festival {
+  background-color: var(--sec-bgcolor);
+  position: relative;
+}
+
+#watermark {
+  position: absolute;
+  top: 3.1rem;
+  left: 17rem;
+}
+
+.next {
+  position: absolute;
+  top: 2rem;
+  left: 18rem;
+  font-family: var(--header-font);
+  font-size: 3.5ch;
+  z-index: 5;
+}
+
+#watermark img {
+  max-height: 10rem;
+}
+
+.festival h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.festival hr {
+  margin-left: 25.2rem;
+}
+
+.festival-box p {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.soon {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#soon {
+  border: 0;
+  padding: 1rem;
+  border-radius: 30rem;
+  background-color: var(--highlight-bgcolor);
+  color: var(--main-bgcolor);
+  font-family: var(--header-font);
+  font-size: 2ch;
+}
+
+.advice {
+  padding: 0;
+}
+
+.advice-box {
+  background-image: url(./Images//Picture6.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 25rem;
+  position: relative;
+}
+
+#advices {
+  min-height: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#advices h1 {
+  color: var(--main-bgcolor);
+  max-width: 60%;
+  text-align: center;
+}
+
+#advices h4 {
+  color: rgb(229, 229, 229);
+  font-family: var(--header-font);
+  font-size: 2.4ch;
+  text-align: center;
+}
+
+#advices hr {
+  min-width: 20%;
+}
+
+@media screen and (min-height: 1301px) and (max-height: 1400px) {
+  .hero {
+    min-height: 40svh;
+  }
+}
+
+@media screen and (min-height: 1100px) and (max-height: 1300px) {
+  .hero {
+    min-height: 50svh;
+  }
+}
+
+@media screen and (min-height: 800px) and (max-height: 1099px) {
+  .hero {
+    min-height: 70svh;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .subscribe-btn {
+    top: 11rem;
+    left: 7.8rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots {
+    padding: 3rem;
+  }
+
+  .subscribe-btn {
+    top: 11rem;
+    left: 7.8rem;
+  }
+
+  .hero-info h1 {
+    font-size: 12ch;
+  }
+
+  .fest-info h1 {
+    font-size: 5ch;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 10ch;
+  }
+
+  .hero-info h4 {
+    font-size: 6ch;
+    max-width: 70%;
+  }
+
+  .hero-image {
+    right: 0;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .about-info p {
+    font-size: 2ch;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1,
+  .linkedin h1 {
+    font-size: 5ch;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .subscribe-btn {
+    top: 10rem;
+    left: 6rem;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .festival-banner,
+  .cinema,
+  .overlay {
+    padding: 3rem;
+  }
+
+  .hero-info h1 {
+    font-size: 14ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .about-info p {
+    font-size: 2ch;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes div {
+    height: max-content;
+  }
+
+  .heroes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroes-info {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+
+  .heroes .image-grid {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    grid-template-columns: 1fr;
+  }
+
+  .grid-image:first-child {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    min-height: 20rem;
+  }
+
+  .grid-image:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    min-height: 20rem;
+  }
+
+  .grid-image:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/3;
+    min-height: max-content;
+  }
+
+  .grid-image video {
+    height: 15rem;
+  }
+
+  .grid-image:last-child {
+    grid-column: 1/2;
+    grid-row: 4/4;
+    min-height: max-content;
+  }
+
+  .heroes-exp {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #image {
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+
+  .heroes-quotes {
+    grid-column: 2/3;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 3ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p {
+    font-size: 2.2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 4.8ch;
+  }
+
+  .patriot-image:nth-child(2),
+  .patriot-image:nth-child(3) {
+    grid-row: 2/2;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .advice-box {
+    min-height: 20rem;
+  }
+
+  .festival-box p {
+    font-size: 2.5ch;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .links {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .subscribe-btn {
+    top: 10rem;
+    left: 5.8rem;
+  }
+
+  .hero-info h1 {
+    font-size: 14ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .about-info p {
+    font-size: 2ch;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .exhibition-details,
+  .patriot {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exhibition-info,
+  .patriot-info {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+
+  .exhibition-details .image-grid,
+  .patriot .image-grid {
+    grid-column: 2/3;
+    grid-row: 1/1;
+  }
+
+  .exh-exp,
+  .patriot-exp {
+    grid-column: 1/3;
+    grid-row: 2/2;
+  }
+
+  .exh-image,
+  .pat-image {
+    grid-column: 1/3;
+    grid-row: 3/3;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 15rem;
+  }
+
+  .exh-image-img:first-child,
+  .pat-image-img:first-child {
+    grid-column: 1/2;
+    grid-row: 1/1;
+  }
+
+  .exh-image-img:nth-child(2),
+  .pat-image-img:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/1;
+  }
+
+  .exh-image-img:nth-child(3),
+  .pat-image-img:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/1;
+  }
+
+  .exh-image-img:nth-child(4),
+  .pat-quotes {
+    grid-column: 4/5;
+    grid-row: 1/1;
+  }
+
+  .exp-quotes {
+    grid-column: 1/3;
+    grid-row: 4/4;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p {
+    font-size: 2.2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 4.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2.4ch;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .subscribe-btn {
+    top: 10rem;
+    left: 5rem;
+  }
+
+  .audio-box h1 {
+    font-size: 5ch;
+  }
+
+  .hero-info h1 {
+    font-size: 14ch;
+    max-width: 90%;
+  }
+
+  .fest-info h1 {
+    font-size: 4ch;
+  }
+
+  .fest-info h4 {
+    font-size: 2.5ch;
+  }
+
+  .patriots-info {
+    max-width: 100%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    max-height: 26rem;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .about-info p {
+    font-size: 2ch;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .patriot,
+  .exhibition-details,
+  .heroes {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibition-info,
+  .patriot-info,
+  .heroes-info {
+    grid-column: 1/3;
+    grid-row: 1/1;
+  }
+
+  .heroes .image-grid {
+    margin: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column: 1/3;
+    grid-row: 2/2;
+  }
+
+  .grid-image:first-child {
+    grid-column: 1/3;
+    grid-row: 1/1;
+  }
+
+  .grid-image:nth-child(2) {
+    grid-column: 3/5;
+    grid-row: 1/1;
+  }
+
+  .grid-image:nth-child(3) {
+    grid-column: 1/3;
+    grid-row: 2/2;
+  }
+
+  .grid-image:nth-child(4) {
+    grid-column: 3/5;
+    grid-row: 2/2;
+  }
+
+  .exhibition-details .image-grid,
+  .patriot .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1/3;
+    grid-row: 2/2;
+    margin: 0;
+  }
+
+  .exhibition-image:first-child,
+  .patriot-image:first-child {
+    grid-column: 1/2;
+  }
+
+  .exhibition-image:nth-child(2),
+  .patriot-image:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    min-height: 20rem;
+  }
+
+  .exhibition-image:nth-child(3),
+  .patriot-image:nth-child(3) {
+    grid-column: 3/3;
+    grid-row: 1/1;
+    min-height: 20rem;
+  }
+
+  .pat-image,
+  .exh-image,
+  #image {
+    min-height: 30rem;
+    grid-column: 1/3;
+    grid-row: 4/4;
+  }
+
+  #image {
+    min-height: 20rem;
+  }
+
+  .pat-image-img:first-child,
+  .exh-image-img:first-child {
+    grid-column: 1/3;
+  }
+
+  .pat-image-img:nth-child(2),
+  .exh-image-img:nth-child(2) {
+    grid-column: 3/5;
+  }
+
+  .pat-image-img:nth-child(3),
+  .exh-image-img:nth-child(3) {
+    grid-column: 1/3;
+    grid-row: 2/2;
+  }
+
+  .pat-quotes,
+  .exh-image-img:nth-child(4) {
+    grid-column: 3/5;
+    grid-row: 2/2;
+  }
+
+  .exh-exp,
+  .patriot-exp,
+  .heroes-exp {
+    grid-column: 1/3;
+    grid-row: 3/3;
+  }
+
+  .exp-quotes,
+  .heroes-quotes {
+    grid-column: 1/3;
+    grid-row: 5/5;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p {
+    font-size: 2.2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 4.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .subscribe-btn {
+    top: 10rem;
+    left: 4.5rem;
+  }
+
+  .hero {
+    background-image: url("./Images/banner-tablet.png");
+    background-size: 100% 100%;
+    background-position: left;
+  }
+
+  .audio-box {
+    padding-block: 0;
+  }
+
+  .audio-box p {
+    font-size: 2ch;
+  }
+
+  .audio-box h1,
+  .audio-box p {
+    max-width: 100%;
+  }
+
+  .hero-info h1 {
+    font-size: 14ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    max-height: 20rem;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .about-info p {
+    font-size: 1.6ch;
+  }
+
+  .image {
+    height: 18rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .exhibition-details .image-grid,
+  .patriot .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exhibition-image:first-child,
+  .patriot-image:first-child {
+    grid-column: 1/3;
+    height: 20rem;
+  }
+
+  .exhibition-image:nth-child(2),
+  .patriot-image:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    min-height: 15rem;
+  }
+
+  .exhibition-image:nth-child(3),
+  .patriot-image:nth-child(3) {
+    grid-column: 2/3;
+    grid-row: 2/2;
+    min-height: 15rem;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p {
+    font-size: 2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 4.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .subscribe-btn {
+    top: 10rem;
+    left: 7rem;
+  }
+
+  .audio-box {
+    padding-block: 0;
+  }
+
+  .audio-box h1 {
+    font-size: 5ch;
+  }
+
+  .audio-box p {
+    font-size: 2.5ch;
+  }
+
+  .cinema-info-box,
+  .overlay {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .overlay {
+    gap: 1rem;
+  }
+
+  .cinema-info h1 {
+    font-size: 3ch;
+  }
+
+  .cinema-image img {
+    width: 60%;
+  }
+
+  .reels {
+    min-height: 25rem;
+  }
+
+  .reels video {
+    max-height: 25rem;
+  }
+
+  .hero {
+    background-size: 140% 100%;
+  }
+
+  .festival-boxs {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 5ch;
+  }
+
+  .patriots-info p {
+    font-size: 2.3ch;
+  }
+
+  .hero-info h1 {
+    font-size: 12ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .afrika-box {
+    flex-direction: column;
+  }
+
+  .afrika-text p {
+    min-width: 80vw;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .about-info p,
+  .cinema-info p {
+    font-size: 2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    background-size: 150% 100%;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .overlay {
+    padding: 3rem;
+  }
+
+  .audio-box h1 {
+    font-size: 5.5ch;
+  }
+
+  .experience-box img {
+    max-height: 15rem;
+  }
+
+  .hero-info h1 {
+    font-size: 12ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    max-height: 15rem;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .audio-btn a {
+    font-size: 2ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .heroes .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-image:first-child {
+    grid-column: 1/3;
+    grid-row: 1/1;
+  }
+
+  .grid-image:nth-child(2) {
+    grid-column: 1/3;
+    grid-row: 2/2;
+  }
+
+  .grid-image:nth-child(3) {
+    grid-row: 3/3;
+    grid-column: 1/2;
+  }
+
+  .grid-image:nth-child(4) {
+    grid-row: 3/3;
+    grid-column: 2/3;
+  }
+
+  .exh-image {
+    grid-template-columns: 1fr;
+  }
+
+  .exh-image-img {
+    min-height: 15rem;
+  }
+
+  .exh-image-img:first-child {
+    grid-column: 1/2;
+  }
+
+  .exh-image-img:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+
+  .exh-image-img:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+
+  .exh-image-img:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 4/4;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .about-info p,
+  .cinema-info p {
+    font-size: 2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .hero {
+    background-size: 160% 100%;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .patriots,
+  .cinema,
+  .festival-banner,
+  .overlay {
+    padding: 3rem 2rem;
+  }
+
+  .hero-info h1 {
+    font-size: 11ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    max-height: 12rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 4.5ch;
+  }
+
+  .patriots-info p {
+    font-size: 2ch;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .image {
+    height: 15rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .upcoming-event {
+    padding: 3rem;
+  }
+
+  .upcoming-event > h4 {
+    max-width: 90vw;
+    font-size: 2.5ch;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-image:nth-child(3),
+  .grid-image:nth-child(4),
+  .exhibition-image:nth-child(2),
+  .exhibition-image:nth-child(3),
+  .patriot-image:nth-child(2),
+  .patriot-image:nth-child(3) {
+    grid-column: 1/3;
+  }
+
+  .grid-image:nth-child(4) {
+    grid-row: 4/4;
+  }
+
+  .exhibition-image:nth-child(3),
+  .patriot-image:nth-child(3) {
+    grid-row: 3/3;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.6ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .about-info p,
+  .cinema-info p,
+  .audio-box p {
+    font-size: 2ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3.8ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  .hero {
+    background-image: url("./Images/banner-mobile.png");
+    background-size: 100% 100%;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .linkedin,
+  .festival-banner,
+  .cinema,
+  .overlay {
+    padding: 3rem 1rem;
+  }
+
+  .audio-box h1 {
+    font-size: 4ch;
+  }
+
+  .cinema-image > img {
+    width: 100%;
+  }
+
+  .reel {
+    min-height: 25rem;
+  }
+
+  .hero-info h1 {
+    font-size: 10ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image img {
+    height: 15rem;
+  }
+
+  .patriots-info h1 {
+    font-size: 4ch;
+  }
+
+  .patriots-info p {
+    font-size: 2ch;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 100vw;
+  }
+
+  .image {
+    height: 20rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1 {
+    font-size: 5ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.4ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .about-info p {
+    font-size: 1.8ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 3ch;
+  }
+
+  .heroes-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.8ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .festival-box p {
+    font-size: 2ch;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding: 1rem;
+  }
+
+  .hero {
+    background-image: url("./Images/banner-mobile.png");
+    background-size: 120% 100%;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .linkedin,
+  .festival-banner,
+  .overlay {
+    padding: 3rem 1rem;
+  }
+
+  .cinema-btn {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .cinema-btn > a {
+    min-width: 100%;
+  }
+
+  .audio-btn {
+    margin: 1rem;
+  }
+
+  .fest-info h1 {
+    font-size: 3ch;
+  }
+
+  .fest-info h4 {
+    font-size: 2.5ch;
+  }
+
+  .fest-info p {
+    font-size: 1.8ch;
+  }
+
+  .patriots-info h1 {
+    font-size: 3.5ch;
+  }
+
+  .fest-btns button {
+    font-size: 2ch;
+  }
+
+  .audio-box p {
+    font-size: 1.6ch;
+  }
+
+  #tickets {
+    padding: 1em;
+    font-size: 1.6ch;
+  }
+
+  .hero-info h1 {
+    font-size: 8ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 4ch;
+  }
+
+  .hero-info h4 {
+    font-size: 4ch;
+    max-width: 50%;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .audio-btn a {
+    padding: 1em;
+    font-size: 2ch;
+  }
+
+  h1 {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info > h4 {
+    font-size: 1.8ch;
+  }
+
+  .image {
+    height: 15rem;
+    background-position: center;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .upcoming-event {
+    padding: 2rem;
+  }
+
+  .upcoming-event > h4 {
+    font-size: 2ch;
+    max-width: 90vw;
+  }
+
+  .event-box {
+    grid-template-columns: 1fr;
+  }
+
+  .event-box div p {
+    font-size: 1.8ch;
+  }
+
+  .date,
+  .venue {
+    min-width: 20rem;
+    margin: 0 auto;
+  }
+
+  .event-link {
+    grid-column: 1/2;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1,
+  .linkedin h1 {
+    font-size: 4ch;
+  }
+
+  .pat-image {
+    grid-template-columns: 1fr;
+  }
+
+  .pat-image-img {
+    min-height: 15rem;
+  }
+
+  .pat-image-img:first-child {
+    grid-column: 1/2;
+  }
+
+  .pat-image-img:nth-child(2) {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+
+  .pat-image-img:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/3;
+  }
+
+  .pat-quotes {
+    grid-column: 1/2;
+    grid-row: 4/4;
+    min-height: 12rem;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.4ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .about-info p,
+  .cinema-info p {
+    font-size: 1.8ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 2.8ch;
+  }
+
+  .heroes-quotes h4,
+  .exp-quotes h4 {
+    font-size: 2ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.5ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .advice-box {
+    min-height: 20rem;
+  }
+
+  #advices h1 {
+    font-size: 2ch;
+  }
+
+  #advices h4 {
+    font-size: 1.5ch;
+    max-width: 16rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    padding: 1rem;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .linkedin {
+    padding: 3rem 1rem;
+  }
+
+  .audio-btn {
+    margin: 0;
+  }
+
+  .linkedin-info {
+    justify-content: center;
+    padding-inline: 0;
+  }
+
+  .audio-box h1 {
+    font-size: 4ch;
+  }
+
+  .patriots-info h1 {
+    font-size: 3ch;
+  }
+
+  .audio-box p,
+  .audio-box span {
+    font-size: 1.5ch;
+  }
+
+  .event-link {
+    grid-column: 1/2;
+    min-width: max-content;
+    padding: 1em;
+  }
+
+  .event-link a {
+    font-size: 1.8ch;
+  }
+
+  #tickets {
+    padding: 1em;
+    font-size: 1.6ch;
+  }
+
+  .hero-info h1 {
+    font-size: 6ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 3ch;
+  }
+
+  .hero-info h4 {
+    font-size: 3.5ch;
+    max-width: 50%;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.8ch;
+  }
+
+  .audio-btn a {
+    font-size: 1.5ch;
+  }
+
+  #text {
+    font-size: 3ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 20rem;
+  }
+
+  .about-info > h4 {
+    font-size: 1.6ch;
+  }
+
+  .image {
+    height: 10rem;
+    background-position: center;
+  }
+
+  .upcoming-event > h1 {
+    max-width: 90vw;
+    font-size: 2.5ch;
+  }
+
+  .upcoming-event > h4 {
+    max-width: 100vw;
+    font-size: 1.5ch;
+  }
+
+  .date,
+  .venue {
+    min-width: 15rem;
+    margin: 0 auto;
+  }
+
+  .event-link a,
+  #afrika-btn {
+    font-size: 1.6ch;
+  }
+
+  .afrika-box img {
+    height: 11rem;
+  }
+
+  audio {
+    max-width: 100%;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1,
+  .linkedin h1 {
+    font-size: 3.2ch;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p,
+  .afrika-text p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .festival-box p,
+  .about-info p,
+  .event-box div p,
+  .linkedin-info p,
+  .afrika-text p,
+  .patriots-info p,
+  .cinema-info p {
+    font-size: 1.8ch;
+  }
+
+  .about-info p {
+    font-size: 1.5ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 2ch;
+  }
+
+  .heroes-quotes h4,
+  .exp-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 3.5ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .advice-box {
+    min-height: 20rem;
+  }
+
+  #advices h1 {
+    font-size: 2ch;
+  }
+
+  #advices h4 {
+    font-size: 1.5ch;
+    max-width: 16rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  header {
+    padding: 1rem;
+  }
+
+  .hero,
+  .about,
+  .premier,
+  .exhibition,
+  .festival,
+  .first-patriots,
+  .linkedin {
+    padding: 3rem 1rem;
+  }
+
+  .fest-info h1 {
+    font-size: 2.5ch;
+  }
+
+  .fest-info h4 {
+    font-size: 2.3ch;
+  }
+
+  .fest-info p {
+    font-size: 1.6ch;
+  }
+
+  .actions {
+    gap: 1rem;
+  }
+
+  .hero-info h1 {
+    font-size: 5.5ch;
+    max-width: 90%;
+  }
+
+  .hero-info p {
+    max-width: max-content;
+    font-size: 3ch;
+  }
+
+  .hero-info h4 {
+    font-size: 3.5ch;
+    max-width: 50%;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .event-link a {
+    font-size: 1.6ch;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .about-info {
+    max-width: 20rem;
+  }
+
+  .image {
+    height: 10rem;
+    background-position: center;
+  }
+
+  .premier h1,
+  .exhibition h1,
+  .first-patriots h1,
+  .festival h1,
+  .linkedin h1 {
+    font-size: 3.8ch;
+  }
+
+  .grid-image:first-child,
+  .grid-image:nth-child(2),
+  #image,
+  .exhibition-image:nth-child(2),
+  .exhibition-image:nth-child(3),
+  .exh-image-img:first-child,
+  .exh-image-img:nth-child(2),
+  .exh-image-img:nth-child(3),
+  .exh-image-img:nth-child(4),
+  .patriot-image:nth-child(2),
+  .patriot-image:nth-child(3),
+  .pat-image-img:first-child,
+  .pat-image-img:nth-child(2),
+  .pat-image-img:nth-child(3) {
+    min-height: 12rem;
+  }
+
+  .heroes-info h4,
+  .exhibition-info h4 {
+    font-size: 2.4ch;
+  }
+
+  .heroes-exp p,
+  .exh-exp p,
+  .patriot-exp p {
+    max-width: 100%;
+  }
+
+  .heroes p,
+  .exhibition p,
+  .patriot p,
+  .festival-box p,
+  .about-info p,
+  .cinema-info p {
+    font-size: 1.5ch;
+  }
+
+  .heroes-quotes h1,
+  .exp-quotes h1 {
+    font-size: 2.2ch;
+  }
+
+  .heroes-quotes h4,
+  .exp-quotes h4 {
+    font-size: 1.5ch;
+  }
+
+  .pat-quotes h4 {
+    font-size: 2.5ch;
+  }
+
+  .next,
+  #watermark {
+    display: none;
+  }
+
+  .advice-box {
+    min-height: 20rem;
+  }
+
+  #advices h1 {
+    font-size: 2ch;
+  }
+
+  #advices h4 {
+    font-size: 1.2ch;
+    max-width: 12rem;
+  }
+
+  .festival-box p {
+    font-size: 1.8ch;
+  }
+}
