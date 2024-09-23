@@ -855,12 +855,21 @@ header {
   margin-top: 2rem;
 }
 
-#afrika-btn {
-  border: none;
+#spotify-icon {
+  max-height: 2rem;
+}
+
+#spotify-link {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   font-family: var(--header-font);
   color: var(--highlight-bgcolor);
+  background-color: var(--main-bgcolor);
   cursor: pointer;
-  font-size: 2.2ch;
+  padding: 1rem;
+  border-radius: 30rem;
+  max-width: max-content;
 }
 
 .afrika {
