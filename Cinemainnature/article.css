@@ -170,13 +170,14 @@ a {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   max-width: max-content;
-  margin: 3rem auto 0;
-  outline: 1px solid var(--main-bgcolor);
+  margin-inline: auto;
+  outline: 2px solid var(--highlight-bgcolor);
   border-radius: 0.3rem;
 }
 
 .mpesa div {
-  padding: 0.5rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .mpesa h4 {
@@ -233,13 +234,15 @@ a {
   gap: 1rem;
 }
 
-.audio-btn a {
+.audio-btn button {
   padding: 1em 2em;
+  border: none;
   border-radius: 30rem;
   color: var(--main-bgcolor);
   background-color: var(--highlight-bgcolor);
   font-family: var(--header-font);
   font-size: 2.2ch;
+  cursor: pointer;
 }
 
 .instagram {
@@ -298,6 +301,101 @@ a {
 video[poster] {
   object-fit: cover;
   width: 100%;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-modal {
+  display: flex;
+}
+
+.modal-body {
+  background-color: var(--sec-bgcolor);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  color: #212121;
+  max-width: 50%;
+}
+
+.modal-content {
+  display: grid;
+  gap: 2rem;
+}
+
+.modal-content h4 {
+  font-family: var(--header-font);
+}
+
+.modal-content p {
+  font-family: var(--paragraph-font);
+}
+
+.modal-content > h4 {
+  color: var(--highlight-bgcolor);
+  font-size: 3ch;
+  text-align: center;
+}
+
+.payment-box {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-top: 2px solid var(--main-bgcolor);
+  border-bottom: 2px solid var(--main-bgcolor);
+}
+
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.payment {
+  padding: 1rem;
+  background-color: var(--main-bgcolor);
+  flex-grow: 1;
+  border-radius: 0.3rem;
+  color: #212121;
+  text-align: center;
+}
+
+.payment h4 {
+  font-family: var(--paragraph-font);
+}
+
+.info {
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.info p > b {
+  color: var(--highlight-bgcolor);
+}
+
+.modal-footer {
+  margin-top: 3rem;
+  display: grid;
+}
+
+#close-modal {
+  border: none;
+  background-color: var(--highlight-bgcolor);
+  padding: 1em;
+  border-radius: 30rem;
+  font-family: var(--header-font);
+  color: var(--main-bgcolor);
+  min-width: 100%;
+  cursor: pointer;
 }
 
 .event-info {
@@ -464,6 +562,10 @@ video[poster] {
   .audio-box h1 {
     font-size: 5ch;
   }
+
+  .modal-body {
+    max-width: 70%;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -516,6 +618,12 @@ video[poster] {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .modal-body {
+    max-width: 90%;
+  }
+}
+
 @media screen and (max-width: 700px) {
   .audio-box h1 {
     font-size: 3.5ch;
@@ -561,6 +669,15 @@ video[poster] {
   .reels video {
     height: 100%;
     max-height: 25rem;
+  }
+
+  .modal-content > h4 {
+    font-size: 2ch;
+  }
+
+  .info h4,
+  .info p {
+    font-size: 1.6ch;
   }
 }
 
@@ -654,6 +771,18 @@ video[poster] {
   .audio-text p,
   .payment-info p {
     font-size: 1.6ch;
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-content > h4 {
+    font-size: 1.8ch;
+  }
+
+  .payment {
+    font-size: 1.5ch;
   }
 }
 

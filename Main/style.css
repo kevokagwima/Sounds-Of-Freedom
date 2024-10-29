@@ -379,6 +379,12 @@ header {
   gap: 1rem;
 }
 
+#episode {
+  font-family: var(--special-font);
+  color: var(--highlight-bgcolor);
+  font-size: 5ch;
+}
+
 .cinema-info p {
   font-size: 2.2ch;
   color: whitesmoke;
@@ -2080,7 +2086,8 @@ video[poster] {
     max-height: 20rem;
   }
 
-  h1 {
+  h1,
+  #episode {
     font-size: 3ch;
   }
 

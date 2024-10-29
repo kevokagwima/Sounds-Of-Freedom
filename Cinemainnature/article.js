@@ -57,6 +57,20 @@ line.forEach((q) => {
   lineObserver.observe(q);
 });
 
+const modal = document.querySelector(".modal");
+const openModalBtn = document.querySelectorAll("#buy-btn");
+const closeModalBtn = document.querySelector("#close-modal");
+
+openModalBtn.forEach((p) => {
+  p.addEventListener("click", () => {
+    modal.classList.add("open-modal");
+  });
+});
+
+closeModalBtn.addEventListener("click", () => {
+  modal.classList.remove("open-modal");
+});
+
 const package_btn = document.querySelector(".package-btn");
 const close_btn = document.querySelector("#close");
 const package_box = document.querySelector(".packages-box");
