@@ -234,7 +234,7 @@ a {
   gap: 1rem;
 }
 
-.audio-btn button {
+.audio-btn a {
   padding: 1em 2em;
   border: none;
   border-radius: 30rem;
@@ -242,7 +242,6 @@ a {
   background-color: var(--highlight-bgcolor);
   font-family: var(--header-font);
   font-size: 2.2ch;
-  cursor: pointer;
 }
 
 .instagram {
