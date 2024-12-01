@@ -224,8 +224,8 @@ a {
   background-color: transparent;
 }
 
-.payment-info p > b {
-  color: greenyellow;
+#phone {
+  color: var(--highlight-bgcolor);
 }
 
 .audio-btn {
