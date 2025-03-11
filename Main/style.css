@@ -438,7 +438,8 @@ header {
   gap: 2rem;
 }
 
-.cinema-btn button {
+.cinema-btn button,
+.audio-btns a button {
   border: none;
   border-radius: 0.3rem;
   padding: 1em;
@@ -777,6 +778,10 @@ header {
   font-weight: bold;
   color: var(--main-bgcolor);
   max-width: 50%;
+}
+
+.audio-btns {
+  margin-top: 1rem;
 }
 
 .scroll {

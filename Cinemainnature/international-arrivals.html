@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SOF | International Arrivals</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="./Images/output-onlinepngtools.png">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="./Images/SOF-logo-black.png" alt="Sound Of Freedom Logo">
+      </a>
+    </div>
+    <div class="links"></div>
+    <div class="account"></div>
+  </header>
+  <div class="event-registration">
+    <h1>International Arrivals</h1>
+    <form name="International Arrivals Form" netlify>
+      <div class="input">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname" id="fname" placeholder="Enter First Name">
+      </div>
+      <div class="input">
+        <label for="lname">Last Name</label>
+        <input type="text" name="lname" id="lname" placeholder="Enter Last Name">
+      </div>
+      <div class="input">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Enter Email Address">
+      </div>
+      <div class="input">
+        <label for="phone">Phone Number</label>
+        <input type="number" name="phone" id="phone" placeholder="Enter Phone Number">
+      </div>
+      <div class="input extend">
+        <label for="no_of_people">No of people attending</label>
+        <input type="number" name="no_of_people" id="no_of_people" placeholder="Enter Number of people attending">
+      </div>
+      <div class="input">
+        <label for="date">Date</label>
+        <input type="date" name="date" id="date" placeholder="Enter Date" min="">
+      </div>
+      <div class="input">
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time" placeholder="Enter time" min="">
+      </div>
+      <button class="btn" type="submit">
+        <span class="button--text">Submit</span>
+      </button>
+    </form>
+  </div>
+
+  <script src="./auth.js"></script>
+  <script src="./book.js"></script>
+</body>
+
+</html>

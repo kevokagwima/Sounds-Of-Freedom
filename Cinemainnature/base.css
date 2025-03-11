@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-margin-top: 3rem;
+}
+
+body {
+  background-color: var(--main-bgcolor);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 4rem 10rem;
+}
+
+:root {
+  --white: #ffffff;
+  --grey: #f5f5f5;
+  --dark-grey: #e2e1e1;
+  --dark: #212121;
+  --orange: #fe6800;
+  --green: #2b4c39;
+  --light-orange: #fff0e6;
+  --radius-s: 0.3rem;
+  --radius-m: 10rem;
+  --radius-l: 30rem;
+  --header-font: "Raleway", sans-serif;
+  --paragraph-font: "Montserrat", sans-serif;
+  --links-font: "Quicksand", sans-serif;
+  --special-font: "Euphoria Script", cursive;
+  --other-font: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--white);
+  max-width: 0.5rem;
+  max-height: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 30rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+h1,
+h4,
+.button--text {
+  font-family: var(--other-font);
+}
+
+h1 {
+  font-weight: 900;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+.button--text {
+  font-weight: 600;
+}
+
+p,
+label,
+span,
+input,
+select,
+td {
+  font-family: var(--paragraph-font);
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-bgcolor);
+  font-family: var(--links-font);
+}
+
+button {
+  border: none;
+  padding: 1em 1.5em;
+  font-family: var(--other-font);
+  border-radius: var(--radius-l);
+  font-size: 2ch;
+  font-weight: 600;
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+button:disabled {
+  background-color: var(--dark-grey);
+  color: var(--dark);
+}
+
+a button {
+  padding: 0.5em 1em;
+  font-size: 1.8ch;
+}
+
+header {
+  padding: 0.5rem 4rem;
+  box-shadow: 0 0 10px -7px black;
+  background-color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+.logo img {
+  max-height: 3rem;
+}
+
+.btn {
+  color: var(--white);
+  border: none;
+  padding: 0.8em;
+  font-size: 2ch;
+  position: relative;
+}
+
+.btn--loading .button--text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn--loading::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  inset: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: var(--orange);
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.tops {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  animation: fade-away 1s 10s forwards;
+}
+
+@keyframes fade-away {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+}
+
+.alert {
+  padding: 0.5rem 1.5rem;
+  font-family: var(--other-font);
+  text-align: center;
+}
+
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+}
+
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    padding-inline: 1rem;
+  }
+
+  .alert {
+    font-size: 1.6ch;
+  }
+}
