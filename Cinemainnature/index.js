@@ -1,16 +1,16 @@
-const bookBtns = document.querySelectorAll("#book-now");
-const closebookBtn = document.querySelector("#cross");
-const bookModal = document.querySelector(".book-modal");
+// const bookBtns = document.querySelectorAll("#book-now");
+// const closebookBtn = document.querySelector("#cross");
+// const bookModal = document.querySelector(".book-modal");
 
-bookBtns.forEach((bookBtn) => {
-  bookBtn.addEventListener("click", () => {
-    bookModal.classList.add("show-book-modal");
-  });
-});
+// bookBtns.forEach((bookBtn) => {
+//   bookBtn.addEventListener("click", () => {
+//     bookModal.classList.add("show-book-modal");
+//   });
+// });
 
-closebookBtn.addEventListener("click", () => {
-  bookModal.classList.remove("show-book-modal");
-});
+// closebookBtn.addEventListener("click", () => {
+//   bookModal.classList.remove("show-book-modal");
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const logoContainer = document.getElementById("logoContainer");
