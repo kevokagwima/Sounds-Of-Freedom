@@ -6,9 +6,10 @@
 
 :root {
   --primary: #1a5d1a;
-  --secondary: #f0a830;
+  --secondary: #fe6800;
   --accent: #e55604;
   --light: #f8f1f1;
+  --white: #ffffff;
   --dark: #1d1d1d;
   --kenya-red: #bb0000;
   --kenya-green: #006600;
@@ -39,39 +40,6 @@ body {
 }
 
 /* Blobs and decorative elements */
-.blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(40px);
-  opacity: 0.2;
-  z-index: 1;
-  /* display: none; */
-}
-
-.blob-1 {
-  width: 300px;
-  height: 300px;
-  background-color: var(--secondary);
-  top: -100px;
-  right: -100px;
-}
-
-.blob-2 {
-  width: 400px;
-  height: 400px;
-  background-color: var(--primary);
-  bottom: -150px;
-  left: -150px;
-}
-
-.blob-3 {
-  width: 250px;
-  height: 250px;
-  background-color: var(--accent);
-  top: 40%;
-  left: 20%;
-}
-
 .icon-leaf {
   position: absolute;
   opacity: 0.1;
@@ -127,8 +95,8 @@ body {
 
 /* Header styles */
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("./Images/DSC_8886.webp") no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./Images/hero.jpg") no-repeat center center/cover;
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -173,12 +141,16 @@ h1 {
   display: inline-block;
   padding: 12px 30px;
   background-color: var(--secondary);
-  color: var(--dark);
+  color: var(--white);
   text-decoration: none;
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
   margin: 10px;
+}
+
+.donate-btn {
+  background-color: var(--kenya-green);
 }
 
 .btn:hover {
@@ -212,9 +184,8 @@ section {
 h2 {
   font-family: var(--header-font);
   font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: var(--primary);
-  text-align: center;
+  margin-bottom: 10px;
+  color: var(--secondary);
 }
 
 h3 {
@@ -234,7 +205,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  align-items: start;
+  align-items: center;
   justify-content: center;
 }
 
@@ -253,7 +224,9 @@ p {
 
 .about-image img {
   width: 100%;
-  height: auto;
+  height: 40rem;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -283,6 +256,10 @@ p {
   );
 }
 
+.event-card h3 {
+  color: var(--dark);
+}
+
 .event-content-box {
   display: flex;
   gap: 2rem;
@@ -290,7 +267,7 @@ p {
   margin-block: 1rem;
   background-color: var(--light);
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .event-image {
@@ -343,6 +320,19 @@ p {
   left: 0;
   color: var(--secondary);
   font-weight: bold;
+}
+
+.maters {
+  background-color: var(--dark);
+}
+
+.maters .container h2,
+.achievements .container h2 {
+  text-align: center;
+}
+
+.maters .container > p {
+  color: var(--white);
 }
 
 /* Achievements section */
@@ -431,14 +421,16 @@ p {
   margin: 0 auto;
   padding: 30px;
   position: relative;
+  background-color: var(--light);
+  border-radius: 10px;
 }
 
 .testimonial::before,
 .testimonial::after {
   content: '"';
   font-size: 4rem;
-  color: var(--secondary);
-  opacity: 0.3;
+  color: var(--kenya-black);
+  opacity: 0.5;
   position: absolute;
 }
 
@@ -449,7 +441,11 @@ p {
 
 .testimonial::after {
   bottom: 0;
-  right: 0;
+  right: 1rem;
+}
+
+.testimonial p {
+  color: var(--dark);
 }
 
 /* Footer */
