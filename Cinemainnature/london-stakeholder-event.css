@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primary: #1a5276;
+  --primary: #2b4c39;
   --secondary: #f1c40f;
   --accent: #fe6800;
   --light: #f9f9f9;
@@ -89,7 +89,7 @@ header::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgb(254, 104, 0, 0.3) 0%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 100%);
 }
 
 header * {
@@ -146,7 +146,7 @@ h1 {
 }
 
 section {
-  padding: 2rem;
+  padding: 2rem 0;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -164,7 +164,7 @@ section {
   display: block;
   width: 100px;
   height: 4px;
-  background: var(--secondary);
+  background: var(--accent);
   margin: 1rem auto;
 }
 
@@ -172,87 +172,79 @@ section {
   display: flex;
   gap: 3rem;
   align-items: center;
+  padding-inline: 2rem;
 }
 
 .about-text {
   flex: 1;
-  text-align: center;
+}
+
+.about-text .section-title {
+  text-align: left;
+  color: var(--);
+}
+
+.about-text .section-title:after {
+  margin: 0;
+}
+
+.about-image img {
+  width: 100%;
+  max-height: 40rem;
+  border-radius: 10px;
 }
 
 /* Fixed Schedule Section - Horizontal Timeline */
-.schedule {
-  background-color: var(--light);
-  color: white;
-  padding: 4rem 2rem;
-  position: relative;
+.compact-schedule {
+  padding: 1rem 2rem 4rem;
+  background-color: var(--primary);
+  max-width: 100%;
 }
 
-.timeline-container {
-  position: relative;
+.compact-schedule .section-title {
+  color: var(--cta-bg);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
   max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
+  margin-inline: auto;
 }
 
-.timeline-line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 3px;
-  height: 100%;
-  background: #f1c40f;
-  transform: translateX(-50%);
-  z-index: 1;
+.time-slot {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background-color: var(--cta-bg);
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-  width: 100%;
-  z-index: 2;
+.time-slot:nth-child(odd) {
+  background-color: var(--cta-bg);
 }
 
-.timeline-dot {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: #f1c40f;
-  border-radius: 50%;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
+.time {
+  font-weight: 600;
+  color: #1a5276;
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
 }
 
-.timeline-content {
-  width: calc(50% - 40px);
-  padding: 1.5rem;
-  background-color: var(--dark);
-  border-radius: 10px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.timeline-content.left {
-  margin-right: auto;
-  margin-left: -2rem;
-}
-
-.timeline-content.right {
-  margin-left: auto;
-  margin-right: -2rem;
-}
-
-.schedule-time {
-  font-weight: 700;
-  color: #f1c40f;
-  margin-bottom: 0.5rem;
+.event h3 {
   font-size: 1.1rem;
+  margin: 0 0 0.3rem 0;
+  color: #17202a;
 }
 
-.schedule-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+.event p {
+  font-size: 0.9rem;
+  margin: 0;
+  color: #666;
+  line-height: 1.4;
 }
 
 /* Theme Carousel Section */
@@ -261,6 +253,7 @@ section {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+  padding-inline: 1rem;
 }
 
 .carousel-container {
@@ -474,9 +467,18 @@ footer {
   opacity: 1;
 }
 
-@media (max-width: 1024px) {
-  .theme-card {
-    flex: 0 0 calc(33.333% - 2rem);
+@media (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-image img {
+    max-height: 30rem;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
   }
 }
 
@@ -503,6 +505,10 @@ footer {
     gap: 1rem;
   }
 
+  .time-slot {
+    grid-template-columns: 1fr;
+  }
+
   .timeline-line,
   .timeline-dot {
     display: none;
@@ -520,6 +526,25 @@ footer {
   .carousel-track {
     width: 100%;
     display: grid;
+  }
+}
+
+@media (max-width: 600px) {
+  .time-slot {
+    grid-template-columns: 90px 1fr;
+    gap: 0.8rem;
+  }
+
+  .time {
+    font-size: 0.85rem;
+  }
+
+  .event h3 {
+    font-size: 1rem;
+  }
+
+  .event p {
+    font-size: 0.85rem;
   }
 }
 
