@@ -152,6 +152,11 @@ h1 {
 .home-btn {
   background-color: var(--light);
   color: var(--dark);
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2ch;
 }
 
 .donate-btn {
@@ -542,6 +547,12 @@ footer {
 
   .stat-number {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-image img {
+    height: 20rem;
   }
 }
 
