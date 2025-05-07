@@ -1,35 +1,3 @@
-// const bookBtns = document.querySelectorAll("#book-now");
-// const closebookBtn = document.querySelector("#cross");
-// const bookModal = document.querySelector(".book-modal");
-
-// bookBtns.forEach((bookBtn) => {
-//   bookBtn.addEventListener("click", () => {
-//     bookModal.classList.add("show-book-modal");
-//   });
-// });
-
-// closebookBtn.addEventListener("click", () => {
-//   bookModal.classList.remove("show-book-modal");
-// });
-
-document.addEventListener("DOMContentLoaded", function () {
-  const logoContainer = document.getElementById("logoContainer");
-  const images = logoContainer.getElementsByTagName("img");
-  let totalWidth = 0;
-
-  for (let img of images) {
-    totalWidth +=
-      img.clientWidth + parseInt(window.getComputedStyle(img).marginRight) * 2;
-  }
-
-  const animationDuration = totalWidth / 100 + 40 + "s";
-  logoContainer.style.animationDuration = animationDuration;
-
-  // Optional: Clone images for seamless scrolling
-  const clonedLogos = logoContainer.innerHTML;
-  logoContainer.innerHTML += clonedLogos;
-});
-
 const contactBtn = document.querySelector("#contactBtn");
 const contactModal = document.querySelector(".contact-modal");
 
