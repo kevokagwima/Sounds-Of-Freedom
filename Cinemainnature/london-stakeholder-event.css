@@ -258,6 +258,11 @@ section {
   display: inline-block;
 }
 
+.schedule-list li b {
+  color: var(--accent);
+  display: inline-block;
+}
+
 /* Themes Grid Styles */
 .themes {
   padding: 2rem;

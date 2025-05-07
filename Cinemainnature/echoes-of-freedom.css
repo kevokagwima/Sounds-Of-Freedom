@@ -139,21 +139,30 @@ h1 {
 
 .btn {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 1em 2em;
   background-color: var(--secondary);
   color: var(--white);
   text-decoration: none;
   border-radius: 30px;
   font-weight: 600;
   transition: all 0.3s ease;
-  margin: 10px;
+  border: none;
+  font-size: 1.5ch;
+  cursor: pointer;
+}
+
+#read-more {
+  border-radius: 10px;
+  background-color: var(--light);
+  outline: 1px solid var(--secondary);
+  color: var(--secondary);
 }
 
 .home-btn {
   background-color: var(--light);
   color: var(--dark);
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1.2ch;
@@ -228,6 +237,11 @@ p {
 .about-text {
   flex: 1;
   min-width: 300px;
+}
+
+.about-text h2 {
+  line-height: 1;
+  font-size: 4ch;
 }
 
 .about-image {
