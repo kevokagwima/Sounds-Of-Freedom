@@ -97,7 +97,7 @@ body {
 header {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("./Images/hero.jpg") no-repeat center center/cover;
-  height: 80vh;
+  height: 70svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
