@@ -767,7 +767,7 @@ header {
 /* Events Grid */
 .events-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   position: relative;
   max-width: max-content;
@@ -1055,6 +1055,12 @@ header {
   }
 } */
 
+@media screen and (max-width: 1450px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .header,
   .hero-info-box,
@@ -1257,6 +1263,10 @@ header {
     justify-content: start;
   }
 
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
   .card {
     height: 20rem;
     min-width: 15rem;
@@ -1298,8 +1308,7 @@ header {
     max-width: 90%;
   }
 
-  .episode-features-info,
-  .events-grid {
+  .episode-features-info {
     grid-template-columns: 1fr;
   }
 
