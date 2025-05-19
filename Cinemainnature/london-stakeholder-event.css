@@ -8,6 +8,7 @@
   --primary: #2b4c39;
   --secondary: #f1c40f;
   --accent: #fe6800;
+  --white: #fff;
   --light: #f9f9f9;
   --dark: #17202a;
   --cta-bg: #f8ede3;
@@ -19,7 +20,7 @@
 }
 
 ::-webkit-scrollbar {
-  background-color: var(--white);
+  background: transparent;
   max-width: 0.5rem;
   max-height: 0.3rem;
 }
@@ -147,7 +148,9 @@ h1 {
   z-index: 1;
 }
 
+.event-highlights button,
 .cta-button {
+  border: none;
   background-color: var(--accent);
   color: white;
   padding: 1rem 2.5rem;
@@ -156,9 +159,19 @@ h1 {
   font-weight: 700;
   font-size: 1.1rem;
   transition: all 0.3s ease;
-  margin-top: 1rem;
   display: inline-block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 100%;
+}
+
+.cta-button {
+  width: max-content;
+}
+
+.event-highlights button i,
+.cta-button i {
+  rotate: -30deg;
 }
 
 .home-btn {
@@ -169,6 +182,12 @@ h1 {
   left: 1rem;
   padding: 0.5rem 1rem;
   font-size: 1.2ch;
+  margin-top: 1rem;
+}
+
+.home-btn i,
+.btn-box i {
+  rotate: 0deg;
 }
 
 .cta-button:hover {
@@ -227,6 +246,33 @@ section {
   width: 100%;
   max-height: 40rem;
   border-radius: 10px;
+}
+
+.event-highlights {
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background-color: var(--cta-bg);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.grid-item {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.grid-item h4,
+.grid-item p {
+  margin: 0;
 }
 
 /* Themes Grid Styles */
@@ -493,7 +539,8 @@ footer {
     gap: 1rem;
   }
 
-  .time-slot {
+  .time-slot,
+  .highlights-grid {
     grid-template-columns: 1fr;
   }
 
@@ -540,7 +587,8 @@ footer {
   }
 
   .about-container,
-  .compact-schedule {
+  .compact-schedule,
+  .event-highlights {
     padding-inline: 1rem;
   }
 
