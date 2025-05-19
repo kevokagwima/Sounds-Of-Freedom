@@ -78,3 +78,34 @@ function showSlides(n) {
   dots[slideIndex - 1].className += " active";
   captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+
+function showEventOptions() {
+  document.getElementById("firstPopup").style.display = "flex";
+}
+
+function showSecondOptions() {
+  closeModal("firstPopup");
+  document.getElementById("secondPopup").style.display = "flex";
+}
+
+function closeModal(modalId) {
+  document.getElementById(modalId).style.display = "none";
+}
+
+function openNairobi() {
+  window.open("https://paydexp.com/cinema-in-nature", "_blank");
+  closeModal("firstPopup");
+}
+
+function openWeekendShow() {
+  window.open("https://paydexp.com/cinema-in-nature-london-edition", "_blank");
+  closeModal("secondPopup");
+}
+
+function openMeetup() {
+  window.open(
+    "https://www.africacentre.org.uk/Event/cinema-in-nature-stakeholder-meetup32",
+    "_blank"
+  );
+  closeModal("secondPopup");
+}

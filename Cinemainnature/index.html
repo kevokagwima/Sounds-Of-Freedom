@@ -24,6 +24,22 @@
 </head>
 
 <body>
+  <div id="firstPopup" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('firstPopup')">×</span>
+      <h3>Select Location</h3>
+      <button onclick="openNairobi()">Nairobi</button>
+      <button onclick="showSecondOptions()">London</button>
+    </div>
+  </div>
+  <div id="secondPopup" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('secondPopup')">×</span>
+      <h3>Select London Event</h3>
+      <button onclick="openWeekendShow()">Weekend Show</button>
+      <button onclick="openMeetup()">Stakeholders Meetup</button>
+    </div>
+  </div>
   <div class="hero">
     <div class="hero-bg">
       <img loading="lazy" src="./Images/Hero-bg.webp" alt="">
@@ -70,40 +86,25 @@
           <div class="events-grid">
             <!-- Event 1 -->
             <div class="event-card">
-              <img src="./Images/London Stakeholder CiN Event Poster (1).webp" alt="Concert" class="event-poster">
-              <div class="event-card-btn">
-                <a target="_blank" href="https://www.africacentre.org.uk/Event/cinema-in-nature-stakeholder-meetup32">
-                  <button>View Event</button>
-                </a>
-              </div>
-            </div>
-            <!-- Event 2 -->
-            <div class="event-card">
-              <img src="./Images/Madaraka Weekend 2025 CiN Events Poster.webp" alt="Art Exhibition"
+              <img src="./Images//Madaraka Weekend General Poster CiN Events Poster (2).webp" alt="Concert"
                 class="event-poster">
               <div class="event-card-btn">
-                <a target="_blank" href="https://paydexp.com/cinema-in-nature">
-                  <button>Get Tickets</button>
-                </a>
+                <button onclick="showEventOptions()">View Event</button>
               </div>
             </div>
-            <!-- Event 3 -->
+
+            <!-- Event 2 -->
             <div class="event-card">
-              <img src="./Images/London Edition CiN Events Poster.webp" alt="Art Exhibition" class="event-poster">
-              <div class="event-card-btn">
-                <a target="_blank" href="https://cinemainnature.com/london-exhibition">
-                  <button>View Event</button>
-                </a>
-              </div>
-            </div>
-            <div class="event-card">
-              <img src="./Images/Pre-London CiN Event Poster.webp" alt="Concert" class="event-poster">
+              <img src="./Images//Pre-London CiN Event Poster.webp" alt="Art Exhibition" class="event-poster">
               <div class="event-card-btn">
                 <a target="_blank" href="https://cinemainnature.com/pre-london-meetup">
-                  <button>View Past Event</button>
+                  <div class="event-card-btn">
+                    <button>View Past Event</button>
+                  </div>
                 </a>
               </div>
             </div>
+
           </div>
         </div>
       </section>
