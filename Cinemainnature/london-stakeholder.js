@@ -15,3 +15,18 @@ document.querySelectorAll(".read-more").forEach((button) => {
     }
   });
 });
+
+function openMeetup() {
+  window.open(
+    "https://www.africacentre.org.uk/Event/cinema-in-nature-stakeholder-meetup32",
+    "_blank"
+  );
+}
+
+function openLondon() {
+  window.open("https://cinemainnature.com/london-exhibition", "_blank");
+}
+
+function openNairobi() {
+  window.open("https://paydexp.com/cinema-in-nature", "_blank");
+}

@@ -435,6 +435,7 @@ section {
   padding: 2rem;
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .cta-section::before {
@@ -461,11 +462,35 @@ section {
   border-radius: 50%;
 }
 
-.cta-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
+.events-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+
+.event-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.event-card img {
+  height: 30rem;
+  aspect-ratio: 2/3;
+  border-radius: 10px;
+}
+
+.event-card-btn button {
+  border: none;
+  padding: 1em;
+  border-radius: 30px;
+  font-size: 1.6ch;
+  font-weight: 900;
+  background-color: var(--accent);
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--paragraph-font);
 }
 
 footer {
@@ -624,5 +649,13 @@ footer {
 
   .theme-image {
     height: 240px;
+  }
+
+  .event-card img {
+    max-height: 20rem;
+  }
+
+  .cta-section {
+    padding: 0;
   }
 }
