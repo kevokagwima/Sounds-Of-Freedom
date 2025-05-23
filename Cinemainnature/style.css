@@ -799,7 +799,7 @@ header {
   }
 }
 
-.event-card-btn button {
+.event-card-btn:nth-child(1) button {
   font-size: 1.8ch;
 }
 

@@ -98,7 +98,7 @@ function openNairobi() {
 }
 
 function openWeekendShow() {
-  window.open("https://paydexp.com/cinema-in-nature-london-edition", "_blank");
+  window.open("https://cinemainnature.com/london-exhibition", "_blank");
   closeModal("secondPopup");
 }
 
