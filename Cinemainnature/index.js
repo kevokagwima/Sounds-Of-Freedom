@@ -88,8 +88,23 @@ function showSecondOptions() {
   document.getElementById("secondPopup").style.display = "flex";
 }
 
+function showContact() {
+  closeModal("contactPopup");
+  document.getElementById("contactPopup").style.display = "flex";
+}
+
 function closeModal(modalId) {
   document.getElementById(modalId).style.display = "none";
+}
+
+function callContact() {
+  window.open("tel:+254702879696");
+  closeModal("contactPopup");
+}
+
+function chatContact() {
+  window.open("https://wa.me/+254702879696", "_blank");
+  closeModal("contactPopup");
 }
 
 function openNairobi() {

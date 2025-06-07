@@ -40,6 +40,19 @@
       <button onclick="openMeetup()">Stakeholders Meetup</button>
     </div>
   </div>
+  <div id="contactPopup" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactPopup')">×</span>
+      <button onclick="callContact()">
+        <i class="fas fa-phone"></i>
+        Call
+      </button>
+      <button onclick="chatContact()">
+        <i class="fab fa-whatsapp"></i>
+        WhatsApp
+      </button>
+    </div>
+  </div>
   <div class="hero">
     <div class="hero-bg">
       <img loading="lazy" src="./Images/Hero-bg.webp" alt="">
@@ -81,6 +94,9 @@
                 experiences in
                 honour of the heroes who fought for our independence as Kenyans! Join the adventure!</b>
             </p>
+            <div class="contact">
+              <button onclick="showContact()">Contact Us</button>
+            </div>
             <h4 class="gradient-text">This Madaraka Weekend <br> 2 EVENTS, 2 CITIES <br> 1 EPIC STORY</h4>
           </div>
           <div class="events-grid">
