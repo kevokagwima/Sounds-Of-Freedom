@@ -132,7 +132,7 @@ header {
   gap: 4rem;
   align-items: center;
   padding-inline: 6rem;
-  display: none;
+  /* display: none; */
 }
 
 .hero-info h4 {
@@ -270,7 +270,7 @@ header {
 
 .contact-modal {
   position: absolute;
-  bottom: -4rem;
+  bottom: -5rem;
   right: 0;
   background-color: var(--orange);
   z-index: 10;
@@ -287,6 +287,11 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.modal-box a button {
+  padding: 0.5rem 1rem;
+  font-size: 2ch;
 }
 
 .now-showing-box {
@@ -370,6 +375,7 @@ header {
   gap: 0.5rem;
   text-align: center;
   color: var(--white);
+  padding-block: 1rem 2rem;
 }
 
 .karura {
@@ -683,6 +689,7 @@ header {
   background-position: center;
   padding: 0;
   overflow: hidden;
+  display: none;
 }
 
 .event-section-overlay {
@@ -1509,6 +1516,10 @@ header {
 
   .event-poster {
     height: 25rem;
+  }
+
+  .contact-modal {
+    bottom: -3.5rem;
   }
 
   @supports (-webkit-touch-callout: none) {

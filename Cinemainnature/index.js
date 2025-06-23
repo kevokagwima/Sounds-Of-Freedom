@@ -80,7 +80,7 @@ function showSlides(n) {
 }
 
 function showEventOptions() {
-  document.getElementById("firstPopup").style.display = "flex";
+  window.open("https://vabu.app/cinema-in-nature", "_blank");
 }
 
 function showSecondOptions() {
