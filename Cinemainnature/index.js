@@ -80,7 +80,14 @@ function showSlides(n) {
 }
 
 function showEventOptions() {
-  window.open("https://vabu.app/cinema-in-nature", "_blank");
+  document.getElementById("firstPopup").style.display = "flex";
+}
+
+function openLondonShow() {
+  window.open(
+    "https://www.eventbrite.co.uk/e/richmond-park-3-mile-wellness-walk-nature-storytelling-painting-tickets-1429243719439",
+    "_blank"
+  );
 }
 
 function showSecondOptions() {
@@ -108,7 +115,7 @@ function chatContact() {
 }
 
 function openNairobi() {
-  window.open("https://paydexp.com/cinema-in-nature", "_blank");
+  window.open("https://vabu.app/cinema-in-nature", "_blank");
   closeModal("firstPopup");
 }
 

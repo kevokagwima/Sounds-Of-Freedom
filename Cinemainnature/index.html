@@ -28,8 +28,8 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('firstPopup')">×</span>
       <h3>Select Location</h3>
-      <button onclick="openNairobi()">Nairobi</button>
-      <button onclick="showSecondOptions()">London</button>
+      <!-- <button onclick="openLondonShow()">London Show</button> -->
+      <button onclick="openNairobi()">Nairobi Show</button>
     </div>
   </div>
   <div id="secondPopup" class="modal">
@@ -86,6 +86,22 @@
           <div class="div"></div>
         </div>
       </div>
+      <section class="events-section">
+        <div class="event-section-overlay">
+          <div class="section-header">
+            <h4 class="gradient-text">Upcoming Event</h4>
+          </div>
+          <div class="events-grid">
+            <!-- Event 1 -->
+            <div class="event-card">
+              <img src="./Images/London August 2025 CiN Events Poster-min.webp" alt="Concert" class="event-poster">
+              <div class="event-card-btn">
+                <button onclick="openLondonShow()">View Events</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <div class="hero-info-box">
         <div class="hero-info">
           <h4>Cinema In Nature</h4>
@@ -101,15 +117,6 @@
               echoes
               of
               Kenya's past, reflect on its stories, and express your connection through creativity.</p>
-          </div>
-          <div class="happening-now">
-            <div class="now-showing-box">
-              <!-- <div class="now-showing">
-                <h4>Next Show</h4>
-              </div> -->
-              <!-- <img loading="lazy" src="./Images/DSC_8886.webp" alt=""> -->
-              <img id="poster" loading="lazy" src="./Images/CiN Events Poster_20250629_141640_0000.webp" alt="">
-            </div>
           </div>
           <div class="book-modal">
             <div class="modal-content">
@@ -142,9 +149,7 @@
             </div>
           </div>
           <div class="hero-btns">
-            <a href="https://vabu.app/cinema-in-nature" target="_blank">
-              <button id="book-now">Book Now</button>
-            </a>
+            <button onclick="showEventOptions()" id="book-now">Book Now</button>
             <button id="contactBtn">Contact Us</button>
             <div class="contact-modal">
               <div class="modal-box">
@@ -159,11 +164,10 @@
           </div>
         </div>
         <div id="img" class="now-showing-box">
-          <!-- <div class="now-showing">
-            <h4>Next Show</h4>
-          </div> -->
-          <img id="poster" loading="lazy" src="./Images/CiN Events Poster_20250629_141640_0000.webp" alt="">
-          <!-- <img loading="lazy" src="./Images/womens-day.webp" alt=""> -->
+          <img class="other-poster" id="poster" loading="lazy"
+            src="./Images/CiN Events Poster_20250707_001351_0000-min.webp" alt="">
+          <img class="priority-poster" id="poster" loading="lazy"
+            src="./Images/CiN Events Poster_20250629_141640_0000.webp" alt="">
         </div>
       </div>
       <!-- <div class="scroll">
@@ -202,48 +206,6 @@
         </a>
       </div>
     </div>
-    <section class="events-section">
-      <div class="event-section-overlay">
-        <button id="left" class="scroll-button" onclick="scrollToptoLeft()">&#10094;</button>
-        <button id="right" class="scroll-button" onclick="scrollTopRight()">&#10095;</button>
-        <!-- <div class="section-header">
-            <h2>Welcome to the 2025 UK/Kenya Season of Culture!</h2>
-            <p><b>In partnership with the British Council and Africa Centre, we're bringing you unforgettable
-                experiences in
-                honour of the heroes who fought for our independence as Kenyans! Join the adventure!</b>
-            </p>
-            <div class="contact">
-              <button onclick="showContact()">Contact Us</button>
-            </div>
-            <h4 class="gradient-text">This Madaraka Weekend <br> 2 EVENTS, 2 CITIES <br> 1 EPIC STORY</h4>
-          </div> -->
-        <div class="events-grid">
-          <div class="event-card">
-            <img src="./Images/28th June CiN Events Poster-min.webp" alt="Concert" class="event-poster">
-            <div class="event-card-btn">
-              <button onclick="showEventOptions()">Get Tickets</button>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="./Images//Madaraka Weekend General Poster CiN Events Poster (2).webp" alt="Concert"
-              class="event-poster">
-            <div class="event-card-btn">
-              <button onclick="showEventOptions()">View Events</button>
-            </div>
-          </div>
-          <div class="event-card">
-            <img src="./Images//Pre-London CiN Event Poster.webp" alt="Art Exhibition" class="event-poster">
-            <div class="event-card-btn">
-              <a target="_blank" href="https://cinemainnature.com/pre-london-meetup">
-                <div class="event-card-btn">
-                  <button>View Past Event</button>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <div class="experience-container-box">
       <div class="episode-box">
         <div id="episode" class="first">
@@ -714,5 +676,6 @@
 
 <script src="./index.js"></script>
 <script src="./slider.js"></script>
+<script src="./script.js"></script>
 
 </html>
