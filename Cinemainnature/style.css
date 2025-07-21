@@ -307,8 +307,8 @@ header {
 .priority-poster {
   z-index: 1;
   position: absolute;
-  left: -8rem;
-  top: -5rem;
+  left: -4rem;
+  top: -4rem;
 }
 
 .other-poster {
