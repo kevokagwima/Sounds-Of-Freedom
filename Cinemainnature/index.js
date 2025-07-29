@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const statNumbers = document.querySelectorAll(".stat-number");
+
+  const animateNumbers = () => {
+    statNumbers.forEach((stat) => {
+      const target = stat.getAttribute("data-count");
+      const suffix = stat.textContent.includes("km") ? "km" : "";
+      const duration = 2000; // Animation duration in ms
+      const step = target / (duration / 16); // 60fps
+
+      let current = 0;
+      const increment = () => {
+        current += step;
+        if (current < target) {
+          stat.textContent = Math.floor(current) + (suffix ? suffix : "");
+          requestAnimationFrame(increment);
+        } else {
+          stat.textContent = target + (suffix ? suffix : "");
+        }
+      };
+
+      increment();
+    });
+  };
+
+  // Trigger animation when section comes into view
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateNumbers();
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  observer.observe(document.querySelector(".stats-section"));
+});
+
 const contactBtn = document.querySelector("#contactBtn");
 const contactModal = document.querySelector(".contact-modal");
 
@@ -85,7 +126,7 @@ function showEventOptions() {
 
 function openLondonShow() {
   window.open(
-    "https://www.eventbrite.co.uk/e/richmond-park-3-mile-wellness-walk-nature-storytelling-painting-tickets-1429243719439",
+    "https://www.eventbrite.co.uk/e/cinema-in-nature-experience-back-in-london-tickets-1524892838529",
     "_blank"
   );
 }

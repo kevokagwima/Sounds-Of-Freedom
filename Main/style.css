@@ -573,6 +573,7 @@ header {
 }
 
 #freedom {
+  margin-top: 0;
   color: var(--highlight-bgcolor);
 }
 
@@ -1363,7 +1364,7 @@ video[poster] {
   min-height: 100%;
   position: absolute;
   inset: 0;
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: rgb(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -1374,13 +1375,20 @@ video[poster] {
 #advices h1 {
   color: var(--main-bgcolor);
   max-width: 60%;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 #advices h4 {
-  color: rgb(229, 229, 229);
+  color: var(--highlight-bgcolor);
   font-family: var(--header-font);
   font-size: 2.4ch;
+  text-align: center;
+}
+
+#advices #freedom {
+  color: var(--main-bgcolor);
+  margin-top: -0.5rem;
   text-align: center;
 }
 
