@@ -309,9 +309,11 @@ header {
   position: absolute;
   left: -4rem;
   top: -4rem;
+  display: none;
 }
 
 .other-poster {
+  margin-top: -4rem;
   opacity: 1;
   /* filter: blur(8px); */
 }
@@ -1394,9 +1396,9 @@ header {
     width: 15rem;
   }
 
-  /* .other-poster {
-    display: none;
-  } */
+  .other-poster {
+    margin-top: 0;
+  }
 
   #poster {
     height: 30rem;
@@ -1596,7 +1598,7 @@ header {
 
   .hero-btns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     min-width: 100%;
   }
